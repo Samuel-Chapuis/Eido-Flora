@@ -4,7 +4,8 @@
 </p>
 
 # EidoPlant
-Ce projet est une extension de EidoMod visant a ajouter généralement la végétation dans le jeu.
+Ce projet est une extension d’EidoMod visant à ajouter de la végétation dans le jeu.
+Il fait suite à "4Vegetation", désormais déprécié.
 
 ## Contribution
 1. Créez une branche dédiée pour chaque nouvelle fonctionnalité ou correction de bug.
