@@ -1,6 +1,6 @@
-<p align="left" style="display: flex; justify-content: space-between; align-items: center;">
-	<img src="src/main/resources/assets/eidomod/textures/block/hibiscus_4.png" alt="Image 2" height="80">
-	<img src="doc/logo.png" alt="Image 1" height="80">
+<p align="left" style="display: flex; gap: 16px; align-items: center;">
+	<img src="src/main/resources/assets/eidomod/textures/block/hibiscus_4.png" alt="Image 2" style="height:80px; width:80px; object-fit:cover;">
+	<img src="doc/logo.png" alt="Image 1" style="height:80px; width:80px; object-fit:cover;">
 </p>
 
 # EidoPlant
