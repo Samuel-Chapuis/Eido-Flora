@@ -1,8 +1,0 @@
-{
-  "variants": {
-    "facing=north": { "model": "eidomod:block/grapygrapevine", "y": 0 },
-    "facing=east":  { "model": "eidomod:block/grapygrapevine", "y": 90 },
-    "facing=south": { "model": "eidomod:block/grapygrapevine", "y": 180 },
-    "facing=west":  { "model": "eidomod:block/grapygrapevine", "y": 270 }
-  }
-}

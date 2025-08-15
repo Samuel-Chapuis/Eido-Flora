@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/flowerbed_1",
-  "textures": {
-    "flowerbed": "eidomod:block/bluet",
-    "stem": "eidomod:block/wildflowers_stem",
-    "render_type": "cutout"
-  }
-}

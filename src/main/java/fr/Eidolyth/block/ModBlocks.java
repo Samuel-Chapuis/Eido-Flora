@@ -1,6 +1,6 @@
 package fr.Eidolyth.block;
 
-import fr.Eidolyth.EidoMod;
+import fr.Eidolyth.EidoPlant;
 import fr.Eidolyth.block.plants.*;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.effect.MobEffects;
@@ -22,13 +22,13 @@ import java.util.function.Supplier;
 import fr.Eidolyth.item.ModItems;
 
 /**
- * Handles the registration of custom plant blocks for the EidoMod vegetation mod.
+ * Handles the registration of custom plant blocks for the EidoPlants vegetation mod.
  * Blocks are registered using Forge's {@link DeferredRegister} system.
  */
 public class ModBlocks {
 	// DeferredRegister to hold all custom blocks
 	public static final DeferredRegister<Block> BLOCKS =
-			DeferredRegister.create(ForgeRegistries.BLOCKS, EidoMod.MODID); // Registers blocks under the mod's namespace
+			DeferredRegister.create(ForgeRegistries.BLOCKS, EidoPlant.MODID); // Registers blocks under the mod's namespace
 
 	/* --------------------- */
 	/* --- Block Entries --- */
@@ -110,10 +110,10 @@ public class ModBlocks {
 		() -> new CustomSaplingBlock(
 			BlockBehaviour.Properties.copy(Blocks.ACACIA_SAPLING),
 			List.of(
-				new ResourceLocation("eidomod", "acacia1"),
-				new ResourceLocation("eidomod", "acacia2"),
-				new ResourceLocation("eidomod", "acacia3"),
-				new ResourceLocation("eidomod", "acacia4")
+				new ResourceLocation("eidoplants", "acacia1"),
+				new ResourceLocation("eidoplants", "acacia2"),
+				new ResourceLocation("eidoplants", "acacia3"),
+				new ResourceLocation("eidoplants", "acacia4")
 			)
 		)
 	);
@@ -122,10 +122,10 @@ public class ModBlocks {
 			() -> new CustomSaplingBlock(
 					BlockBehaviour.Properties.copy(Blocks.BIRCH_SAPLING),
 					List.of(
-							new ResourceLocation("eidomod", "birch1"),
-							new ResourceLocation("eidomod", "birch2"),
-							new ResourceLocation("eidomod", "birch3"),
-							new ResourceLocation("eidomod", "birch4")
+							new ResourceLocation("eidoplants", "birch1"),
+							new ResourceLocation("eidoplants", "birch2"),
+							new ResourceLocation("eidoplants", "birch3"),
+							new ResourceLocation("eidoplants", "birch4")
 					)
 			)
 	);
@@ -134,11 +134,11 @@ public class ModBlocks {
 			() -> new CustomSaplingBlock(
 					BlockBehaviour.Properties.copy(Blocks.BIRCH_SAPLING),
 					List.of(
-							new ResourceLocation("eidomod", "bushy_birch1"),
-							new ResourceLocation("eidomod", "bushy_birch2"),
-							new ResourceLocation("eidomod", "bushy_birch3"),
-							new ResourceLocation("eidomod", "bushy_birch4"),
-							new ResourceLocation("eidomod", "bushy_birch5")
+							new ResourceLocation("eidoplants", "bushy_birch1"),
+							new ResourceLocation("eidoplants", "bushy_birch2"),
+							new ResourceLocation("eidoplants", "bushy_birch3"),
+							new ResourceLocation("eidoplants", "bushy_birch4"),
+							new ResourceLocation("eidoplants", "bushy_birch5")
 					)
 			)
 	);
@@ -147,9 +147,9 @@ public class ModBlocks {
 		() -> new CustomSaplingBlock(
 			BlockBehaviour.Properties.copy(Blocks.DARK_OAK_SAPLING),
 			List.of(
-				new ResourceLocation("eidomod", "dark_oak1"),
-				new ResourceLocation("eidomod", "dark_oak2"),
-				new ResourceLocation("eidomod", "dark_oak3")
+				new ResourceLocation("eidoplants", "dark_oak1"),
+				new ResourceLocation("eidoplants", "dark_oak2"),
+				new ResourceLocation("eidoplants", "dark_oak3")
 			)
 		)
 	);
@@ -158,9 +158,9 @@ public class ModBlocks {
 		() -> new CustomSaplingBlock(
 			BlockBehaviour.Properties.copy(Blocks.JUNGLE_SAPLING),
 			List.of(
-				new ResourceLocation("eidomod", "jungle1"),
-				new ResourceLocation("eidomod", "jungle2"),
-				new ResourceLocation("eidomod", "jungle3")
+				new ResourceLocation("eidoplants", "jungle1"),
+				new ResourceLocation("eidoplants", "jungle2"),
+				new ResourceLocation("eidoplants", "jungle3")
 			)
 		)
 	);
@@ -169,9 +169,9 @@ public class ModBlocks {
 		() -> new MangroveCustomSapling(
 			BlockBehaviour.Properties.copy(Blocks.MANGROVE_PROPAGULE),
 			List.of(
-				new ResourceLocation("eidomod", "mangrove1"),
-				new ResourceLocation("eidomod", "mangrove2"),
-				new ResourceLocation("eidomod", "mangrove3")
+				new ResourceLocation("eidoplants", "mangrove1"),
+				new ResourceLocation("eidoplants", "mangrove2"),
+				new ResourceLocation("eidoplants", "mangrove3")
 			)
 		)
 	);
@@ -180,9 +180,9 @@ public class ModBlocks {
 		() -> new CustomSaplingBlock(
 			BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING),
 			List.of(
-				new ResourceLocation("eidomod", "oak1"),
-				new ResourceLocation("eidomod", "oak2"),
-				new ResourceLocation("eidomod", "oak3")
+				new ResourceLocation("eidoplants", "oak1"),
+				new ResourceLocation("eidoplants", "oak2"),
+				new ResourceLocation("eidoplants", "oak3")
 			)
 		)
 	);
@@ -191,11 +191,11 @@ public class ModBlocks {
 		() -> new CustomSaplingBlock(
 			BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING),
 			List.of(
-				new ResourceLocation("eidomod", "palm1"),
-				new ResourceLocation("eidomod", "palm2"),
-				new ResourceLocation("eidomod", "palm3"),
-				new ResourceLocation("eidomod", "palm4"),
-				new ResourceLocation("eidomod", "palm5")
+				new ResourceLocation("eidoplants", "palm1"),
+				new ResourceLocation("eidoplants", "palm2"),
+				new ResourceLocation("eidoplants", "palm3"),
+				new ResourceLocation("eidoplants", "palm4"),
+				new ResourceLocation("eidoplants", "palm5")
 			)
 		)
 	);
@@ -204,9 +204,9 @@ public class ModBlocks {
 		() -> new CustomSaplingBlock(
 			BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING),
 			List.of(
-				new ResourceLocation("eidomod", "plume1"),
-				new ResourceLocation("eidomod", "plume2"),
-				new ResourceLocation("eidomod", "plume3")
+				new ResourceLocation("eidoplants", "plume1"),
+				new ResourceLocation("eidoplants", "plume2"),
+				new ResourceLocation("eidoplants", "plume3")
 			)
 		)
 	);
@@ -215,10 +215,10 @@ public class ModBlocks {
 		() -> new CustomSaplingBlock(
 			BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING),
 			List.of(
-				new ResourceLocation("eidomod", "sakura1"),
-				new ResourceLocation("eidomod", "sakura2"),
-				new ResourceLocation("eidomod", "sakura3"),
-				new ResourceLocation("eidomod", "sakura4")
+				new ResourceLocation("eidoplants", "sakura1"),
+				new ResourceLocation("eidoplants", "sakura2"),
+				new ResourceLocation("eidoplants", "sakura3"),
+				new ResourceLocation("eidoplants", "sakura4")
 			)
 		)
 	);
@@ -227,10 +227,10 @@ public class ModBlocks {
 		() -> new CustomSaplingBlock(
 			BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING),
 			List.of(
-				new ResourceLocation("eidomod", "sequoia1"),
-				new ResourceLocation("eidomod", "sequoia2"),
-				new ResourceLocation("eidomod", "sequoia3"),
-				new ResourceLocation("eidomod", "sequoia4")
+				new ResourceLocation("eidoplants", "sequoia1"),
+				new ResourceLocation("eidoplants", "sequoia2"),
+				new ResourceLocation("eidoplants", "sequoia3"),
+				new ResourceLocation("eidoplants", "sequoia4")
 			)
 		)
 	);
@@ -239,12 +239,12 @@ public class ModBlocks {
 		() -> new CustomSaplingBlock(
 			BlockBehaviour.Properties.copy(Blocks.SPRUCE_SAPLING),
 			List.of(
-				new ResourceLocation("eidomod", "spruce1"),
-				new ResourceLocation("eidomod", "spruce2"),
-				new ResourceLocation("eidomod", "spruce3"),
-				new ResourceLocation("eidomod", "spruce4"),
-				new ResourceLocation("eidomod", "spruce5"),
-				new ResourceLocation("eidomod", "spruce6")
+				new ResourceLocation("eidoplants", "spruce1"),
+				new ResourceLocation("eidoplants", "spruce2"),
+				new ResourceLocation("eidoplants", "spruce3"),
+				new ResourceLocation("eidoplants", "spruce4"),
+				new ResourceLocation("eidoplants", "spruce5"),
+				new ResourceLocation("eidoplants", "spruce6")
 			)
 		)
 	);

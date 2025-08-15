@@ -23,12 +23,12 @@ import org.slf4j.Logger;
 
 
 // The value here should match an entry in the META-INF/mods.toml file
-@Mod(EidoMod.MODID)
-public class EidoMod {
-    public static final String MODID = "eidomod";
+@Mod(EidoPlant.MODID)
+public class EidoPlant {
+    public static final String MODID = "eidoplants";
     private static final Logger LOGGER = LogUtils.getLogger();
 
-    public EidoMod() {
+    public EidoPlant() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
 		ModBlocks.register(modEventBus);               // Register the blocks

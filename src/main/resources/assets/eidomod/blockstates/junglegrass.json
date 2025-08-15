@@ -1,8 +1,0 @@
-{
-    "variants": {
-        "facing=north": { "model": "eidomod:block/junglegrasslight", "y": 0 },
-        "facing=east":  { "model": "eidomod:block/junglegrasslight", "y": 90 },
-        "facing=south": { "model": "eidomod:block/junglegrasslight", "y": 180 },
-        "facing=west":  { "model": "eidomod:block/junglegrasslight", "y": 270 }
-    }
-}

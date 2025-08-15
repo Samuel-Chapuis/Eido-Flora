@@ -1,6 +1,6 @@
 package fr.Eidolyth.item;
 
-import fr.Eidolyth.EidoMod;
+import fr.Eidolyth.EidoPlant;
 import fr.Eidolyth.block.ModBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
@@ -13,7 +13,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 
 /**
- * Registers custom creative mode tabs for the EidoMod vegetation mod.
+ * Registers custom creative mode tabs for the EidoPlants vegetation mod.
  * Organizes mod-specific plant items and blocks within the Minecraft creative inventory.
  */
 public class ModCreativeModTabs {
@@ -23,12 +23,12 @@ public class ModCreativeModTabs {
      * Associates the tabs with the mod's unique identifier.
      */
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
-            DeferredRegister.create(Registries.CREATIVE_MODE_TAB, EidoMod.MODID);
+            DeferredRegister.create(Registries.CREATIVE_MODE_TAB, EidoPlant.MODID);
 
 
-    public static final RegistryObject<CreativeModeTab> PLANTS_TAB = CREATIVE_MODE_TABS.register("plants_eidomod",
+    public static final RegistryObject<CreativeModeTab> PLANTS_TAB = CREATIVE_MODE_TABS.register("plants_eidoplants",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.JUNGLE_GRASS.get()))
-                    .title(Component.translatable("creativetab.plants_eidomod"))
+                    .title(Component.translatable("creativetab.plants_eidoplants"))
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(ModBlocks.CUSTOM_ACCACIA_SAPLING.get());
                         pOutput.accept(ModBlocks.CUSTOM_BIRCH_SAPLING.get());

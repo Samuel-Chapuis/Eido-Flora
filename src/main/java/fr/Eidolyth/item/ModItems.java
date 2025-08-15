@@ -1,6 +1,6 @@
 package fr.Eidolyth.item;
 
-import fr.Eidolyth.EidoMod;
+import fr.Eidolyth.EidoPlant;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -17,7 +17,7 @@ public class ModItems {
 	 * Associates the items with the mod's unique identifier.
 	 */
 	public static final DeferredRegister<Item> ITEMS =
-		DeferredRegister.create(ForgeRegistries.ITEMS, EidoMod.MODID);
+		DeferredRegister.create(ForgeRegistries.ITEMS, EidoPlant.MODID);
 
 	// Plant-related items can be added here in the future if needed
 

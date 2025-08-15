@@ -15,7 +15,7 @@ import org.lwjgl.glfw.GLFW;
  * This class defines custom key bindings and processes key press and release events
  * to modify global variables used in the mod's rendering logic.
  */
-@Mod.EventBusSubscriber(modid = "eidomod", bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+@Mod.EventBusSubscriber(modid = "eidoplants", bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class KeyInputHandler {
 
     /* --------------------- */
@@ -27,10 +27,10 @@ public class KeyInputHandler {
      * This key is used to modify the first global variable (Globals.global1).
      */
     public static final KeyMapping J_KEY_BINDING = new KeyMapping(
-            "key.eidomod.j_key", // Translation key for localization
+            "key.eidoplants.j_key", // Translation key for localization
             InputConstants.Type.KEYSYM, // Type of input (keyboard key)
             GLFW.GLFW_KEY_J, // The GLFW key code for 'J'
-            "category.eidomod.custom_keys" // Category in the controls menu
+            "category.eidoplants.custom_keys" // Category in the controls menu
     );
 
     /**
@@ -38,38 +38,38 @@ public class KeyInputHandler {
      * This key is used to modify the second global variable (Globals.global2).
      */
     public static final KeyMapping K_KEY_BINDING = new KeyMapping(
-            "key.eidomod.k_key", // Translation key for localization
+            "key.eidoplants.k_key", // Translation key for localization
             InputConstants.Type.KEYSYM, // Type of input (keyboard key)
             GLFW.GLFW_KEY_K, // The GLFW key code for 'K'
-            "category.eidomod.custom_keys" // Category in the controls menu
+            "category.eidoplants.custom_keys" // Category in the controls menu
     );
 
     public static final KeyMapping L_KEY_BINDING = new KeyMapping(
-            "key.eidomod.l_key", // Translation key for localization
+            "key.eidoplants.l_key", // Translation key for localization
             InputConstants.Type.KEYSYM, // Type of input (keyboard key)
             GLFW.GLFW_KEY_L, // The GLFW key code for 'L'
-            "category.eidomod.custom_keys" // Category in the controls menu
+            "category.eidoplants.custom_keys" // Category in the controls menu
     );
 
     public static final KeyMapping U_KEY_BINDING = new KeyMapping(
-            "key.eidomod.u_key", // Translation key for localization
+            "key.eidoplants.u_key", // Translation key for localization
             InputConstants.Type.KEYSYM, // Type of input (keyboard key)
             GLFW.GLFW_KEY_U, // The GLFW key code for 'U'
-            "category.eidomod.custom_keys" // Category in the controls menu
+            "category.eidoplants.custom_keys" // Category in the controls menu
     );
 
     public static final KeyMapping I_KEY_BINDING = new KeyMapping(
-            "key.eidomod.i_key", // Translation key for localization
+            "key.eidoplants.i_key", // Translation key for localization
             InputConstants.Type.KEYSYM, // Type of input (keyboard key)
             GLFW.GLFW_KEY_I, // The GLFW key code for 'I'
-            "category.eidomod.custom_keys" // Category in the controls menu
+            "category.eidoplants.custom_keys" // Category in the controls menu
     );
 
     public static final KeyMapping O_KEY_BINDING = new KeyMapping(
-            "key.eidomod.o_key", // Translation key for localization
+            "key.eidoplants.o_key", // Translation key for localization
             InputConstants.Type.KEYSYM, // Type of input (keyboard key)
             GLFW.GLFW_KEY_O, // The GLFW key code for 'O'
-            "category.eidomod.custom_keys" // Category in the controls menu
+            "category.eidoplants.custom_keys" // Category in the controls menu
     );
 
     /* ----------------------------- */
@@ -98,7 +98,7 @@ public class KeyInputHandler {
      * Handles key input events to detect when custom keys are pressed or released.
      * This inner class listens to key events and updates global variables accordingly.
      */
-    @Mod.EventBusSubscriber(modid = "eidomod", bus = Mod.EventBusSubscriber.Bus.FORGE, value = Dist.CLIENT)
+    @Mod.EventBusSubscriber(modid = "eidoplants", bus = Mod.EventBusSubscriber.Bus.FORGE, value = Dist.CLIENT)
     public static class ClientEvents {
 
         /**
