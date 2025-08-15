@@ -1,0 +1,10 @@
+{
+	"required": true,
+	"package": "fr.Eidolyth.mixin",
+	"compatibilityLevel": "JAVA_17",
+	"refmap": "mixins.planes.refmap.json",
+	"mixins": [
+	],
+	"client": [],
+	"minVersion": "0.8"
+}

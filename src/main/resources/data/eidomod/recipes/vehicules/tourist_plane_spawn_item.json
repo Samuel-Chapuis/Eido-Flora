@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " I ",
+    "IPI",
+    " I "
+  ],
+  "key": {
+    "I": { "item": "minecraft:iron_ingot" },
+    "P": { "item": "minecraft:paper" }
+  },
+  "result": {
+    "item": "eidomod:tourist_plane_spawn_item",
+    "count": 1
+  }
+}

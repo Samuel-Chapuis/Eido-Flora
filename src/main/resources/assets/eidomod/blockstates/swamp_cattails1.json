@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "half=lower": [
+      {
+        "model": "eidomod:block/swamp_cattails1_lower"
+      }
+    ],
+    "half=upper": {
+      "model": "eidomod:block/swamp_cattails1_upper"
+    }
+  }
+}

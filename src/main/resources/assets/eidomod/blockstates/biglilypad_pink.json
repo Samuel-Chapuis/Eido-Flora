@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "eidomod:block/biglilypad_pink", "y": 0 },
+    "facing=east":  { "model": "eidomod:block/biglilypad_pink", "y": 90 },
+    "facing=south": { "model": "eidomod:block/biglilypad_pink", "y": 180 },
+    "facing=west":  { "model": "eidomod:block/biglilypad_pink", "y": 270 }
+  }
+}

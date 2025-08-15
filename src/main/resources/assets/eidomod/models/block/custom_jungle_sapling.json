@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "eidomod:block/custom_jungle_sapling"
+  },
+  "render_type": "cutout"
+}

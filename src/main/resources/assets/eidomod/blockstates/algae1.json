@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "eidomod:block/algae1", "y": 0 },
+    "facing=east":  { "model": "eidomod:block/algae1", "y": 90 },
+    "facing=south": { "model": "eidomod:block/algae1", "y": 180 },
+    "facing=west":  { "model": "eidomod:block/algae1", "y": 270 }
+  }
+}

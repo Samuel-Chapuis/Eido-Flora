@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    { "item": "minecraft:oak_sapling" },
+    { "item": "minecraft:azalea" }
+  ],
+  "result": {
+    "item": "eidomod:custom_plume_sapling",
+    "count": 1
+  }
+}

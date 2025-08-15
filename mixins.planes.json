@@ -1,0 +1,11 @@
+{
+	"required": true,
+	"package": "fr.thoridan.planes.mixin",
+	"compatibilityLevel": "JAVA_17",
+	"refmap": "modid.refmap.json",
+	"mixins": [
+	],
+	"client": [
+	],
+	"minVersion": "0.8"
+}
