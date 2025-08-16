@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "eidoplants:block/junglegrass", "y": 0 },
+    "facing=east":  { "model": "eidoplants:block/junglegrass", "y": 90 },
+    "facing=south": { "model": "eidoplants:block/junglegrass", "y": 180 },
+    "facing=west":  { "model": "eidoplants:block/junglegrass", "y": 270 }
+  }
+}

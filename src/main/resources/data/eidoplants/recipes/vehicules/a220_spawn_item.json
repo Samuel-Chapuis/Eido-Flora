@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " B ",
+    "PPP",
+    "PBP"
+  ],
+  "key": {
+    "B": { "item": "minecraft:iron_block" },
+    "P": { "item": "minecraft:paper" }
+  },
+  "result": {
+    "item": "a220_spawn_item",
+    "count": 1
+  }
+}

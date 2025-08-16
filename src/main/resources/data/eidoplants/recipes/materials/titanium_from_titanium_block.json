@@ -1,0 +1,13 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"categorie": "misc",
+	"ingredients": [
+		{
+			"item": "eidoplants:titanium_block"
+		}
+	],
+	"result": {
+		"item": "eidoplants:titanium",
+		"count": 9
+	}
+}

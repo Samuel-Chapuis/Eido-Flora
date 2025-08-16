@@ -1,0 +1,11 @@
+{
+  "variants": {
+    "":
+    [
+      {"model": "eidoplants:block/custom_oak_sapling", "y": 0},
+      {"model": "eidoplants:block/custom_oak_sapling", "y": 90},
+      {"model": "eidoplants:block/custom_oak_sapling", "y": 180},
+      {"model": "eidoplants:block/custom_oak_sapling", "y": 270}
+    ]
+  }
+}

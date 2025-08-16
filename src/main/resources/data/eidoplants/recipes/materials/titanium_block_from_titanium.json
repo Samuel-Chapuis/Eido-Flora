@@ -1,0 +1,17 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"categorie": "misc",
+	"pattern": [
+		"###",
+		"###",
+		"###"
+	],
+	"key": {
+		"#":{
+			"item": "eidoplants:titanium"
+		}
+	},
+	"result": {
+		"item": "eidoplants:titanium_block"
+	}
+}

@@ -1,0 +1,31 @@
+{
+	"textures": {
+		"0": "eidoplants:block/spring_leaf_litter",
+		"particle": "eidoplants:block/spring_leaf_litter"
+	},
+	"render_type": "cutout",
+	"elements": [
+		{
+			"from": [0, 0.1, 0],
+			"to": [8, 0.1, 8],
+			"rotation": { "angle": 0, "axis": "y", "origin": [0, 0.1, 0] },
+			"faces": {
+				"north": { "uv": [0, 0, 8, 0], "texture": "#0", "tintindex": 0 },
+				"east":  { "uv": [0, 0, 8, 0], "texture": "#0", "tintindex": 0 },
+				"south": { "uv": [0, 0, 8, 0], "texture": "#0", "tintindex": 0 },
+				"west":  { "uv": [0, 0, 8, 0], "texture": "#0", "tintindex": 0 },
+				"up":    { "uv": [0, 0, 8, 8], "texture": "#0", "tintindex": 0 },
+				"down":  { "uv": [8, 0, 0, 8], "rotation": 180, "texture": "#0", "tintindex": 0 }
+			}
+		}
+	],
+	"groups": [
+		{
+			"name": "group",
+			"origin": [0, 0.1, 0],
+			"color": 0,
+			"children": [0]
+		}
+	],
+	"tintindex": 0
+}

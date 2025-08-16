@@ -1,0 +1,30 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "eidoplants:block/hibiscus_0",
+        "weight": 1
+      },
+      {
+        "model": "eidoplants:block/hibiscus_1",
+        "weight": 1
+      },
+      {
+        "model": "eidoplants:block/hibiscus_2",
+        "weight": 1
+      },
+      {
+        "model": "eidoplants:block/hibiscus_3",
+        "weight": 1
+      },
+      {
+        "model": "eidoplants:block/hibiscus_4",
+        "weight": 1
+      },
+      {
+        "model": "eidoplants:block/hibiscus_5",
+        "weight": 1
+      }
+    ]
+  }
+}

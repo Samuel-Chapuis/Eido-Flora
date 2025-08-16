@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "half=lower": [
+      {
+        "model": "eidoplants:block/cattails2_lower"
+      }
+    ],
+    "half=upper": {
+      "model": "eidoplants:block/cattails2_upper"
+    }
+  }
+}

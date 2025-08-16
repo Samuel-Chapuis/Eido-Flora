@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "eidoplants:block/custom_dark_oak_sapling"
+  },
+  "render_type": "cutout"
+}
