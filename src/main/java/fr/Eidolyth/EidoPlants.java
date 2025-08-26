@@ -14,6 +14,7 @@ import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
+import fr.Eidolyth.worldgen.ModWorldGen;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(EidoPlants.MODID)
@@ -34,6 +35,7 @@ public class EidoPlants {
         ModItems.register(modEventBus);
         ModCreativeModTabs.register(modEventBus);
     ModFeatures.register(modEventBus);
+    ModWorldGen.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in.
         NeoForge.EVENT_BUS.register(this);
