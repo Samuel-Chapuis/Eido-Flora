@@ -41,22 +41,22 @@ public class CattailBlock extends DoublePlantBlock implements SimpleWaterloggedB
     public BlockState getStateForPlacement(@Nonnull BlockPlaceContext context) {
         FluidState fluidstate = context.getLevel().getFluidState(context.getClickedPos());
         boolean isWater = fluidstate.is(FluidTags.WATER) && fluidstate.getAmount() == 8;
-        
+
         BlockPos pos = context.getClickedPos();
         Level level = context.getLevel();
-        
+
         if (!level.isEmptyBlock(pos.above())) {
             return null;
         }
-        
+
         BlockState lower = this.defaultBlockState()
                 .setValue(HALF, DoubleBlockHalf.LOWER)
                 .setValue(WATERLOGGED, isWater);
-                
+
         if (!this.canSurvive(lower, level, pos)) {
             return null;
         }
-        
+
         level.setBlock(pos.above(), this.defaultBlockState().setValue(HALF, DoubleBlockHalf.UPPER), 3);
         return lower;
     }

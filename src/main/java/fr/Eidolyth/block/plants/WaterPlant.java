@@ -1,6 +1,5 @@
 package fr.Eidolyth.block.plants;
 
-import net.minecraft.client.color.block.BlockColor;
 import net.minecraft.client.renderer.BiomeColors;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -21,7 +20,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 
 import javax.annotation.Nullable;
 
-public class WaterPlant extends WaterlilyBlock implements BlockColor {
+public class WaterPlant extends WaterlilyBlock implements net.minecraft.client.color.block.BlockColor {
     public static VoxelShape SHAPE = Block.box(0, 0, 0, 16, 1.5, 16);
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
     public WaterPlant(Properties properties) {
@@ -29,8 +28,7 @@ public class WaterPlant extends WaterlilyBlock implements BlockColor {
                 .strength(0.0F)  // Same as vanilla lily pad
                 .noOcclusion()
                 .instabreak()
-                .sound(SoundType.LILY_PAD)  // Use lily pad sounds
-                .noCollission());  // Allow walking through like vanilla lily pad
+                .sound(SoundType.LILY_PAD));  // Use lily pad sounds
         this.registerDefaultState(this.defaultBlockState().setValue(FACING, Direction.NORTH));
     }
 
@@ -44,7 +42,14 @@ public class WaterPlant extends WaterlilyBlock implements BlockColor {
 
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext context) {
-        return this.defaultBlockState().setValue(FACING, context.getHorizontalDirection().getOpposite());
+        // Allow placement on water blocks
+        BlockPos pos = context.getClickedPos();
+        BlockState stateBelow = context.getLevel().getBlockState(pos.below());
+        
+        if (mayPlaceOn(stateBelow, context.getLevel(), pos.below())) {
+            return this.defaultBlockState().setValue(FACING, context.getHorizontalDirection().getOpposite());
+        }
+        return null;
     }
 
     @Override
@@ -61,6 +66,7 @@ public class WaterPlant extends WaterlilyBlock implements BlockColor {
     protected boolean mayPlaceOn(BlockState state, BlockGetter level, BlockPos pos) {
         FluidState fluidState = level.getFluidState(pos);
         FluidState fluidStateAbove = level.getFluidState(pos.above());
+        // Allow placement on water blocks or ice, with empty fluid above
         return (fluidState.getType() == Fluids.WATER || state.getBlock() instanceof IceBlock) &&
                 fluidStateAbove.getType() == Fluids.EMPTY;
     }
@@ -69,7 +75,10 @@ public class WaterPlant extends WaterlilyBlock implements BlockColor {
     public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
         BlockPos blockBelow = pos.below();
         BlockState stateBelow = level.getBlockState(blockBelow);
-        return this.mayPlaceOn(stateBelow, level, blockBelow);
+        FluidState fluidStateBelow = level.getFluidState(blockBelow);
+        // Can survive on water blocks or if water is present
+        return (fluidStateBelow.getType() == Fluids.WATER || stateBelow.getBlock() instanceof IceBlock) ||
+               this.mayPlaceOn(stateBelow, level, blockBelow);
     }
 
     @Override
@@ -82,7 +91,7 @@ public class WaterPlant extends WaterlilyBlock implements BlockColor {
         if (world != null && pos != null) {
             return BiomeColors.getAverageFoliageColor(world, pos);
         }
-        // Couleur de secours si hors monde (ex. inventaire)
+        // Fallback color for out-of-world rendering (e.g., inventory)
         return 0x48B518;
     }
 }

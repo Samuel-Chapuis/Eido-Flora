@@ -1,0 +1,30 @@
+# This is the mod loader specification for NeoForge
+modLoader="javafml"
+loaderVersion="[1,)"
+license="All Rights Reserved"
+
+# The mod ID
+[[mods]]
+modId="eidoplants"
+version="1.0.0"
+displayName="EidoPlants"
+description='''
+A mod that adds various plants and vegetation to Minecraft.
+'''
+credits="Created by Eidolyth"
+authors="Eidolyth"
+
+# Dependencies
+[[dependencies.eidoplants]]
+    modId="neoforge"
+    type="required"
+    versionRange="[21.1.200,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.eidoplants]]
+    modId="minecraft"
+    type="required"
+    versionRange="[1.21.1,1.22)"
+    ordering="NONE"
+    side="BOTH"

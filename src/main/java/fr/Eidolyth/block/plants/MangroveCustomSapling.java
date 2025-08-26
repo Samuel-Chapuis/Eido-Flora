@@ -6,9 +6,8 @@ import java.util.List;
 
 public class MangroveCustomSapling extends CustomSaplingBlock {
 
-
     public MangroveCustomSapling(Properties properties, List<ResourceLocation> structures) {
         super(properties, structures);
-        yoffset = 7;
+        yoffset = -7;
     }
 }

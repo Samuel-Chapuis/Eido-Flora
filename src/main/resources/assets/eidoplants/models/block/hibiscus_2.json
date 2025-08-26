@@ -2,5 +2,6 @@
   "parent": "minecraft:block/cross",
   "textures": {
     "cross": "eidoplants:block/hibiscus_2"
-  }
+  },
+  "render_type": "cutout"
 }

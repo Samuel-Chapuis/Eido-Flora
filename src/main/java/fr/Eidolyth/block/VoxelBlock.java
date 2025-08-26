@@ -1,31 +1,29 @@
 package fr.Eidolyth.block;
 
-import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.world.item.context.BlockPlaceContext;
-import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.RenderShape;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.core.BlockPos;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-public class VoxelBlock extends Block{
+public class VoxelBlock extends Block {
     public static VoxelShape SHAPE = Block.box(0, 0, 0, 16, 16, 16);
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
 
-
-    public VoxelBlock(Properties properties) {
-        super(properties
-                .strength(1.0f)
-                .noOcclusion()
-                .instabreak()
-                .noCollission()
-                .isRedstoneConductor((a, b, c) -> false)
-                .isSuffocating((a, b, c) -> false));
+    public VoxelBlock(BlockBehaviour.Properties properties) {
+    super(properties
+        .strength(1.0f)
+        .noOcclusion()
+        .instabreak()
+        .isRedstoneConductor((a, b, c) -> false)
+        .isSuffocating((a, b, c) -> false));
         this.registerDefaultState(this.defaultBlockState().setValue(FACING, Direction.NORTH));
     }
 
@@ -39,7 +37,7 @@ public class VoxelBlock extends Block{
     }
 
     @Override
-    public BlockState getStateForPlacement(BlockPlaceContext context) {
+    public BlockState getStateForPlacement(net.minecraft.world.item.context.BlockPlaceContext context) {
         return this.defaultBlockState().setValue(FACING, context.getHorizontalDirection().getOpposite());
     }
 

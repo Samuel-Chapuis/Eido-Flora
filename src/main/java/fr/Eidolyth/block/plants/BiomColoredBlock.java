@@ -55,7 +55,6 @@ public class BiomColoredBlock extends Block implements net.minecraft.client.colo
         if (pos != null && level != null) {
             return BiomeColors.getAverageFoliageColor(level, pos);
         }
-        // Utilisation d'une couleur de feuillage par défaut (vert forêt)
         return 0x48B518;
     }
 }

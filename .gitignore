@@ -6,6 +6,8 @@ bin
 .classpath
 .project
 
+EXEMPLE
+
 # idea
 out
 *.ipr
@@ -20,10 +22,7 @@ build
 # other
 eclipse
 run
-/.vscode
-/.idea
+runs
+run-data
 
-# Files from Forge MDK
-forge*changelog.txt
-/Nature X/
-NatureX
+repo

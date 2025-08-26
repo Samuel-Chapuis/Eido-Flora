@@ -8,6 +8,7 @@
   "render_type": "cutout",
   "elements": [
     {
+      "shade": false,
       "from": [0, 0, 8],
       "to": [16, 16, 8],
       "rotation": {"angle": 45, "axis": "y", "origin": [8, 8, 8]},
@@ -21,6 +22,7 @@
       }
     },
     {
+      "shade": false,
       "from": [0, 0, 8],
       "to": [16, 16, 8],
       "rotation": {"angle": -45, "axis": "y", "origin": [8, 8, 8]},
