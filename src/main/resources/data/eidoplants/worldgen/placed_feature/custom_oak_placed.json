@@ -1,23 +1,26 @@
 {
   "feature": "eidoplants:custom_oak",
   "placement": [
-    {
-      "type": "minecraft:count",
-      "count": 5
+    { "type": "minecraft:count", "count": 5 },
+    { "type": "minecraft:in_square" },
+
+    { "type": "minecraft:heightmap", "heightmap": "OCEAN_FLOOR" },
+
+    { "type": "minecraft:surface_water_depth_filter", "max_water_depth": 0 },
+
+    { "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:all_of",
+        "predicates": [
+          { "type": "minecraft:replaceable" },
+          { "type": "minecraft:matching_blocks",
+            "offset": [0,-1,0],
+            "blocks": ["minecraft:grass_block","minecraft:dirt","minecraft:podzol","minecraft:coarse_dirt","minecraft:rooted_dirt"]
+          }
+        ]
+      }
     },
-    {
-      "type": "minecraft:in_square"
-    },
-    {
-      "type": "minecraft:heightmap",
-      "heightmap": "MOTION_BLOCKING"
-    },
-    {
-      "type": "minecraft:surface_water_depth_filter",
-      "max_water_depth": 0
-    },
-    {
-      "type": "minecraft:biome"
-    }
+
+    { "type": "minecraft:biome" }
   ]
 }

@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:remove_features",
+  "biomes": "#minecraft:is_overworld",
+  "features": "#eidoplants:vanilla_trees",
+  "steps": ["vegetal_decoration"]
+}

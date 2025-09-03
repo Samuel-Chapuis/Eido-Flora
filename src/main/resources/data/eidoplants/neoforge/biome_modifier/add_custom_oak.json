@@ -3,7 +3,7 @@
   "biomes": [
     "minecraft:forest",
     "minecraft:birch_forest",
-  "minecraft:dark_forest"
+    "minecraft:dark_forest"
   ],
   "features": "eidoplants:custom_oak_placed",
   "step": "vegetal_decoration"
