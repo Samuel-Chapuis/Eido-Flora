@@ -10,6 +10,7 @@
     ],
     "rotate": true,
     "mirror": true,
-    "ignore_air": true
+    "ignore_air": true,
+    "y_offset": 1
   }
 }
