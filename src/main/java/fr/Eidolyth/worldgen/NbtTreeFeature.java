@@ -122,21 +122,25 @@ public class NbtTreeFeature extends Feature<NbtTreeFeatureConfig> {
             return false;
         }
 
-        // 5) Centrer le placement de l'arbre
+        // 5) Calculer la position finale avec l'offset Y
+        var finalPos = pos.offset(0, cfg.y_offset(), 0);
+        System.out.println("[EidoPlants] Original pos=" + pos + ", y_offset=" + cfg.y_offset() + ", final pos=" + finalPos);
+
+        // 6) Centrer le placement de l'arbre
         // centre horizontal du template (au niveau Y=0)
         var sz = template.getSize();
-        var half = new net.minecraft.core.BlockPos(sz.getX() / 2, 1, sz.getZ() / 2);
+        var half = new net.minecraft.core.BlockPos(sz.getX() / 2, 0, sz.getZ() / 2);
 
         // Transformer ce vecteur selon Mirror/Rotation pour connaître le décalage réel
         var halfTransformed = net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate
                 .transform(half, settings.getMirror(), settings.getRotation(), net.minecraft.core.BlockPos.ZERO);
 
-        // Décaler l'origine pour que halfTransformed tombe sur 'pos' (position de base)
-        var origin = pos.subtract(halfTransformed);
+        // Décaler l'origine pour que halfTransformed tombe sur 'finalPos' (position avec offset Y)
+        var origin = finalPos.subtract(halfTransformed);
 
         // Placement centré sur ServerLevelAccessor
         boolean placed = template.placeInWorld(srv, origin, origin, settings, random, 2);
-        System.out.println("[EidoPlants] placeInWorld=" + placed + " at " + origin + " (centered from " + pos + ")");
+        System.out.println("[EidoPlants] placeInWorld=" + placed + " at " + origin + " (centered from " + finalPos + ")");
         return placed;
     }
 }

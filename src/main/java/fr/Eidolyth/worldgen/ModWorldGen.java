@@ -29,7 +29,8 @@ public class ModWorldGen {
                 ),
                 true,
                 true,
-                true
+                true,
+                -1  // y_offset pour les arbres (placement à y-1 pour les racines)
             );
             return new ConfiguredFeature<NbtTreeFeatureConfig, NbtTreeFeature>(feature, cfg);
         });
@@ -47,7 +48,8 @@ public class ModWorldGen {
                 ),
                 true,
                 true,
-                true
+                true,
+                -1  // y_offset pour les arbres
             );
             return new ConfiguredFeature<NbtTreeFeatureConfig, NbtTreeFeature>(feature, cfg);
         });
@@ -70,7 +72,8 @@ public class ModWorldGen {
                 ),
                 true,
                 true,
-                true
+                true,
+                -1  // y_offset pour les arbres
             );
             return new ConfiguredFeature<NbtTreeFeatureConfig, NbtTreeFeature>(feature, cfg);
         });
@@ -87,7 +90,8 @@ public class ModWorldGen {
                 ),
                 true,
                 true,
-                true
+                true,
+                -1  // y_offset pour les arbres
             );
             return new ConfiguredFeature<NbtTreeFeatureConfig, NbtTreeFeature>(feature, cfg);
         });
@@ -104,7 +108,8 @@ public class ModWorldGen {
                 ),
                 true,
                 true,
-                true
+                true,
+                -1  // y_offset pour les arbres
             );
             return new ConfiguredFeature<NbtTreeFeatureConfig, NbtTreeFeature>(feature, cfg);
         });
@@ -121,7 +126,8 @@ public class ModWorldGen {
                 ),
                 true,
                 true,
-                true
+                true,
+                -1  // y_offset pour les arbres
             );
             return new ConfiguredFeature<NbtTreeFeatureConfig, NbtTreeFeature>(feature, cfg);
         });
@@ -141,7 +147,8 @@ public class ModWorldGen {
                 ),
                 true,
                 true,
-                true
+                true,
+                -1  // y_offset pour les arbres
             );
             return new ConfiguredFeature<NbtTreeFeatureConfig, NbtTreeFeature>(feature, cfg);
         });
@@ -158,7 +165,8 @@ public class ModWorldGen {
                 ),
                 true,
                 true,
-                true
+                true,
+                -1  // y_offset pour les arbres
             );
             return new ConfiguredFeature<NbtTreeFeatureConfig, NbtTreeFeature>(feature, cfg);
         });
@@ -176,7 +184,8 @@ public class ModWorldGen {
                 ),
                 true,
                 true,
-                true
+                true,
+                -1  // y_offset pour les arbres
             );
             return new ConfiguredFeature<NbtTreeFeatureConfig, NbtTreeFeature>(feature, cfg);
         });
@@ -194,7 +203,8 @@ public class ModWorldGen {
                 ),
                 true,
                 true,
-                true
+                true,
+                -1  // y_offset pour les arbres
             );
             return new ConfiguredFeature<NbtTreeFeatureConfig, NbtTreeFeature>(feature, cfg);
         });
@@ -214,7 +224,8 @@ public class ModWorldGen {
                 ),
                 true,
                 true,
-                true
+                true,
+                -1  // y_offset pour les arbres
             );
             return new ConfiguredFeature<NbtTreeFeatureConfig, NbtTreeFeature>(feature, cfg);
         });

@@ -11,6 +11,6 @@
     "rotate": true,
     "mirror": true,
     "ignore_air": true,
-    "y_offset": 1
+    "y_offset": -1
   }
 }

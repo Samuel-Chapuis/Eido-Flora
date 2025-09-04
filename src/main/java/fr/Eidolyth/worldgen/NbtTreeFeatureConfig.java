@@ -10,13 +10,15 @@ public record NbtTreeFeatureConfig(
         List<ResourceLocation> templates,
         boolean rotate,
         boolean mirror,
-        boolean ignore_air
+        boolean ignore_air,
+        int y_offset
 ) implements FeatureConfiguration {
 
     public static final Codec<NbtTreeFeatureConfig> CODEC = RecordCodecBuilder.create(instance -> instance.group(
             ResourceLocation.CODEC.listOf().fieldOf("templates").forGetter(NbtTreeFeatureConfig::templates),
             Codec.BOOL.fieldOf("rotate").forGetter(NbtTreeFeatureConfig::rotate),
             Codec.BOOL.fieldOf("mirror").forGetter(NbtTreeFeatureConfig::mirror),
-            Codec.BOOL.fieldOf("ignore_air").forGetter(NbtTreeFeatureConfig::ignore_air)
+            Codec.BOOL.fieldOf("ignore_air").forGetter(NbtTreeFeatureConfig::ignore_air),
+            Codec.INT.fieldOf("y_offset").forGetter(NbtTreeFeatureConfig::y_offset)
     ).apply(instance, NbtTreeFeatureConfig::new));
 }
