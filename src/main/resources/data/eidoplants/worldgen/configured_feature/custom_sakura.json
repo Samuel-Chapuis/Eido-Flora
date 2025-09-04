@@ -1,0 +1,14 @@
+{
+  "type": "eidoplants:nbt_tree",
+  "config": {
+    "templates": [
+      "eidoplants:sakura1",
+      "eidoplants:sakura2",
+      "eidoplants:sakura3",
+      "eidoplants:sakura4"
+    ],
+    "rotate": true,
+    "mirror": true,
+    "ignore_air": true
+  }
+}

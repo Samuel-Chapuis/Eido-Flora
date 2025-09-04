@@ -1,0 +1,13 @@
+{
+  "type": "eidoplants:nbt_tree",
+  "config": {
+    "templates": [
+      "eidoplants:dark_oak1",
+      "eidoplants:dark_oak2",
+      "eidoplants:dark_oak3"
+    ],
+    "rotate": true,
+    "mirror": true,
+    "ignore_air": true
+  }
+}

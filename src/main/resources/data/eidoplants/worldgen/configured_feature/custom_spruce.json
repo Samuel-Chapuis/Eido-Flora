@@ -1,0 +1,16 @@
+{
+  "type": "eidoplants:nbt_tree",
+  "config": {
+    "templates": [
+      "eidoplants:spruce1",
+      "eidoplants:spruce2",
+      "eidoplants:spruce3",
+      "eidoplants:spruce4",
+      "eidoplants:spruce5",
+      "eidoplants:spruce6"
+    ],
+    "rotate": true,
+    "mirror": true,
+    "ignore_air": true
+  }
+}

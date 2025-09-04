@@ -1,0 +1,9 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": [
+    "minecraft:beach",
+    "minecraft:snowy_beach"
+  ],
+  "features": "eidoplants:custom_palm_placed",
+  "step": "vegetal_decoration"
+}

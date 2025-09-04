@@ -1,0 +1,13 @@
+{
+  "type": "eidoplants:nbt_tree",
+  "config": {
+    "templates": [
+      "eidoplants:mangrove1",
+      "eidoplants:mangrove2",
+      "eidoplants:mangrove3"
+    ],
+    "rotate": true,
+    "mirror": true,
+    "ignore_air": true
+  }
+}

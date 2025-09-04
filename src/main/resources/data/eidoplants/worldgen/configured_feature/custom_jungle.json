@@ -1,0 +1,13 @@
+{
+  "type": "eidoplants:nbt_tree",
+  "config": {
+    "templates": [
+      "eidoplants:jungle1",
+      "eidoplants:jungle2",
+      "eidoplants:jungle3"
+    ],
+    "rotate": true,
+    "mirror": true,
+    "ignore_air": true
+  }
+}

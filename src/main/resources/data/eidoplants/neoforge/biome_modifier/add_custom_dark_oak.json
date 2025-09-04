@@ -1,0 +1,8 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": [
+    "minecraft:dark_forest"
+  ],
+  "features": "eidoplants:custom_dark_oak_placed",
+  "step": "vegetal_decoration"
+}
