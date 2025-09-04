@@ -102,9 +102,41 @@ public class NbtTreeFeature extends Feature<NbtTreeFeatureConfig> {
             settings.addProcessor(net.minecraft.world.level.levelgen.structure.templatesystem.BlockIgnoreProcessor.STRUCTURE_AND_AIR);
         }
 
-        // 5) Placement sur ServerLevelAccessor (OK worldgen ET /place)
-        boolean placed = template.placeInWorld(srv, pos, pos, settings, random, 2);
-        System.out.println("[EidoPlants] placeInWorld=" + placed + " at " + pos);
+        // 4bis) Vérifier que le centre de la structure est sur un bloc de terre approprié
+        var templateSize = template.getSize();
+        var centerPos = pos.offset(templateSize.getX() / 2, 0, templateSize.getZ() / 2);
+        var blockBelowCenter = level.getBlockState(centerPos.below());
+
+        // Liste des blocs appropriés pour les arbres
+        var acceptableBlocks = java.util.Set.of(
+            net.minecraft.world.level.block.Blocks.GRASS_BLOCK,
+            net.minecraft.world.level.block.Blocks.DIRT,
+            net.minecraft.world.level.block.Blocks.PODZOL,
+            net.minecraft.world.level.block.Blocks.COARSE_DIRT,
+            net.minecraft.world.level.block.Blocks.ROOTED_DIRT
+        );
+
+        // Vérifier si le bloc sous le centre est un bloc de terre approprié
+        if (!acceptableBlocks.contains(blockBelowCenter.getBlock())) {
+            System.out.println("[EidoPlants] Center position not on acceptable ground block: " + blockBelowCenter.getBlock() + ", skipping placement at " + pos);
+            return false;
+        }
+
+        // 5) Centrer le placement de l'arbre
+        // centre horizontal du template (au niveau Y=0)
+        var sz = template.getSize();
+        var half = new net.minecraft.core.BlockPos(sz.getX() / 2, 1, sz.getZ() / 2);
+
+        // Transformer ce vecteur selon Mirror/Rotation pour connaître le décalage réel
+        var halfTransformed = net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate
+                .transform(half, settings.getMirror(), settings.getRotation(), net.minecraft.core.BlockPos.ZERO);
+
+        // Décaler l'origine pour que halfTransformed tombe sur 'pos' (position de base)
+        var origin = pos.subtract(halfTransformed);
+
+        // Placement centré sur ServerLevelAccessor
+        boolean placed = template.placeInWorld(srv, origin, origin, settings, random, 2);
+        System.out.println("[EidoPlants] placeInWorld=" + placed + " at " + origin + " (centered from " + pos + ")");
         return placed;
     }
 }
