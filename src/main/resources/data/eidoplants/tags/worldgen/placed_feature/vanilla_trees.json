@@ -1,68 +1,22 @@
 {
   "replace": false,
   "values": [
-    "minecraft:ocean",
-    "minecraft:frozen_ocean",
-    "minecraft:deep_frozen_ocean",
-    "minecraft:cold_ocean",
-    "minecraft:deep_cold_ocean",
-    "minecraft:deep_ocean",
-    "minecraft:lukewarm_ocean",
-    "minecraft:deep_lukewarm_ocean",
-    "minecraft:warm_ocean",
-
-    "minecraft:river",
-    "minecraft:frozen_river",
-
-    "minecraft:beach",
-    "minecraft:snowy_beach",
-    "minecraft:stony_shore",
-
-    "minecraft:plains",
-    "minecraft:sunflower_plains",
-
-    "minecraft:forest",
-    "minecraft:flower_forest",
-    "minecraft:birch_forest",
-    "minecraft:old_growth_birch_forest",
-    "minecraft:dark_forest",
-
-    "minecraft:taiga",
-    "minecraft:old_growth_pine_taiga",
-    "minecraft:old_growth_spruce_taiga",
-
-    "minecraft:jungle",
-    "minecraft:sparse_jungle",
-    "minecraft:bamboo_jungle",
-
-    "minecraft:windswept_hills",
-    "minecraft:windswept_gravelly_hills",
-    "minecraft:windswept_forest",
-
-    "minecraft:swamp",
-    "minecraft:mangrove_swamp",
-
-    "minecraft:desert",
-
-    "minecraft:savanna",
-    "minecraft:windswept_savanna",
-    "minecraft:savanna_plateau",
-
-    "minecraft:badlands",
-    "minecraft:eroded_badlands",
-    "minecraft:wooded_badlands",
-
-    "minecraft:snowy_plains",
-    "minecraft:ice_spikes",
-    "minecraft:snowy_taiga",
-
-    "minecraft:grove",
-    "minecraft:meadow",
-    "minecraft:snowy_slopes",
-    "minecraft:frozen_peaks",
-    "minecraft:jagged_peaks",
-    "minecraft:stony_peaks",
-
-    "minecraft:cherry_grove"
+    "minecraft:trees_plains",
+    "minecraft:trees_birch_and_oak",
+    "minecraft:trees_birch",
+    "minecraft:trees_taiga",
+    "minecraft:trees_old_growth_spruce_taiga",
+    "minecraft:trees_old_growth_pine_taiga",
+    "minecraft:trees_swamp",
+    "minecraft:trees_jungle",
+    "minecraft:trees_sparse_jungle",
+    "minecraft:trees_savanna",
+    "minecraft:trees_meadow",
+    "minecraft:trees_grove",
+    "minecraft:trees_snowy",
+    "minecraft:trees_windswept_forest",
+    "minecraft:trees_windswept_hills",
+    "minecraft:trees_windswept_savanna",
+    "minecraft:dark_forest_vegetation"
   ]
 }
