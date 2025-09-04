@@ -3,6 +3,9 @@
   "config": {
     "templates": [
       "eidoplants:mangrove1",
+      "eidoplants:mangrove1",
+      "eidoplants:mangrove1",
+      "eidoplants:mangrove2",
       "eidoplants:mangrove2",
       "eidoplants:mangrove3"
     ],

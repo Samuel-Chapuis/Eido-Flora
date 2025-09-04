@@ -3,6 +3,9 @@
   "config": {
     "templates": [
       "eidoplants:plume1",
+      "eidoplants:plume1",
+      "eidoplants:plume1",
+      "eidoplants:plume2",
       "eidoplants:plume2",
       "eidoplants:plume3"
     ],

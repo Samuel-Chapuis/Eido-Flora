@@ -1,0 +1,18 @@
+{
+  "type": "eidoplants:nbt_tree",
+  "config": {
+    "templates": [
+      "eidoplants:bushy_birch1",
+      "eidoplants:bushy_birch1",
+      "eidoplants:bushy_birch1",
+      "eidoplants:bushy_birch2",
+      "eidoplants:bushy_birch3",
+      "eidoplants:bushy_birch4",
+      "eidoplants:bushy_birch5"
+    ],
+    "rotate": true,
+    "mirror": true,
+    "ignore_air": true,
+    "y_offset": -1
+  }
+}

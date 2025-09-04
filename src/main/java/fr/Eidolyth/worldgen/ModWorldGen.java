@@ -1,7 +1,6 @@
 package fr.Eidolyth.worldgen;
 
 import fr.Eidolyth.ModFeatures;
-import fr.Eidolyth.worldgen.NbtTreeFeatureConfig;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
@@ -16,7 +15,6 @@ public class ModWorldGen {
         DeferredRegister.create(Registries.PLACED_FEATURE, fr.Eidolyth.EidoPlants.MODID);
 
     // Register the configured feature for custom_oak
-    @SuppressWarnings("unchecked")
     public static final DeferredHolder<ConfiguredFeature<?, ?>, ConfiguredFeature<?, ?>> CUSTOM_OAK =
         CONFIGURED_FEATURES.register("custom_oak", () -> {
             // Explicitly create typed instances to help the compiler with generics
@@ -24,6 +22,9 @@ public class ModWorldGen {
             NbtTreeFeatureConfig cfg = new NbtTreeFeatureConfig(
                 java.util.Arrays.asList(
                     ResourceLocation.tryParse("eidoplants:oak1"),
+                    ResourceLocation.tryParse("eidoplants:oak1"),
+                    ResourceLocation.tryParse("eidoplants:oak1"),
+                    ResourceLocation.tryParse("eidoplants:oak2"),
                     ResourceLocation.tryParse("eidoplants:oak2"),
                     ResourceLocation.tryParse("eidoplants:oak3")
                 ),
@@ -42,6 +43,9 @@ public class ModWorldGen {
             NbtTreeFeatureConfig cfg = new NbtTreeFeatureConfig(
                 java.util.Arrays.asList(
                     ResourceLocation.tryParse("eidoplants:acacia1"),
+                    ResourceLocation.tryParse("eidoplants:acacia1"),
+                    ResourceLocation.tryParse("eidoplants:acacia1"),
+                    ResourceLocation.tryParse("eidoplants:acacia2"),
                     ResourceLocation.tryParse("eidoplants:acacia2"),
                     ResourceLocation.tryParse("eidoplants:acacia3"),
                     ResourceLocation.tryParse("eidoplants:acacia4")
@@ -61,9 +65,29 @@ public class ModWorldGen {
             NbtTreeFeatureConfig cfg = new NbtTreeFeatureConfig(
                 java.util.Arrays.asList(
                     ResourceLocation.tryParse("eidoplants:birch1"),
+                    ResourceLocation.tryParse("eidoplants:birch1"),
+                    ResourceLocation.tryParse("eidoplants:birch1"),
+                    ResourceLocation.tryParse("eidoplants:birch2"),
                     ResourceLocation.tryParse("eidoplants:birch2"),
                     ResourceLocation.tryParse("eidoplants:birch3"),
-                    ResourceLocation.tryParse("eidoplants:birch4"),
+                    ResourceLocation.tryParse("eidoplants:birch4")
+                ),
+                true,
+                true,
+                true,
+                -1  // y_offset pour les arbres
+            );
+            return new ConfiguredFeature<NbtTreeFeatureConfig, NbtTreeFeature>(feature, cfg);
+        });
+
+    // Bushy Birch trees
+    public static final DeferredHolder<ConfiguredFeature<?, ?>, ConfiguredFeature<?, ?>> CUSTOM_BUSHY_BIRCH =
+        CONFIGURED_FEATURES.register("custom_bushy_birch", () -> {
+            NbtTreeFeature feature = (NbtTreeFeature) ModFeatures.NBT_TREE.get();
+            NbtTreeFeatureConfig cfg = new NbtTreeFeatureConfig(
+                java.util.Arrays.asList(
+                    ResourceLocation.tryParse("eidoplants:bushy_birch1"),
+                    ResourceLocation.tryParse("eidoplants:bushy_birch1"),
                     ResourceLocation.tryParse("eidoplants:bushy_birch1"),
                     ResourceLocation.tryParse("eidoplants:bushy_birch2"),
                     ResourceLocation.tryParse("eidoplants:bushy_birch3"),
@@ -85,6 +109,9 @@ public class ModWorldGen {
             NbtTreeFeatureConfig cfg = new NbtTreeFeatureConfig(
                 java.util.Arrays.asList(
                     ResourceLocation.tryParse("eidoplants:dark_oak1"),
+                    ResourceLocation.tryParse("eidoplants:dark_oak1"),
+                    ResourceLocation.tryParse("eidoplants:dark_oak1"),
+                    ResourceLocation.tryParse("eidoplants:dark_oak2"),
                     ResourceLocation.tryParse("eidoplants:dark_oak2"),
                     ResourceLocation.tryParse("eidoplants:dark_oak3")
                 ),
@@ -102,6 +129,8 @@ public class ModWorldGen {
             NbtTreeFeature feature = (NbtTreeFeature) ModFeatures.NBT_TREE.get();
             NbtTreeFeatureConfig cfg = new NbtTreeFeatureConfig(
                 java.util.Arrays.asList(
+                    ResourceLocation.tryParse("eidoplants:jungle1"),
+                    ResourceLocation.tryParse("eidoplants:jungle1"),
                     ResourceLocation.tryParse("eidoplants:jungle1"),
                     ResourceLocation.tryParse("eidoplants:jungle2"),
                     ResourceLocation.tryParse("eidoplants:jungle3")
@@ -121,6 +150,9 @@ public class ModWorldGen {
             NbtTreeFeatureConfig cfg = new NbtTreeFeatureConfig(
                 java.util.Arrays.asList(
                     ResourceLocation.tryParse("eidoplants:mangrove1"),
+                    ResourceLocation.tryParse("eidoplants:mangrove1"),
+                    ResourceLocation.tryParse("eidoplants:mangrove1"),
+                    ResourceLocation.tryParse("eidoplants:mangrove2"),
                     ResourceLocation.tryParse("eidoplants:mangrove2"),
                     ResourceLocation.tryParse("eidoplants:mangrove3")
                 ),
@@ -160,6 +192,9 @@ public class ModWorldGen {
             NbtTreeFeatureConfig cfg = new NbtTreeFeatureConfig(
                 java.util.Arrays.asList(
                     ResourceLocation.tryParse("eidoplants:plume1"),
+                    ResourceLocation.tryParse("eidoplants:plume1"),
+                    ResourceLocation.tryParse("eidoplants:plume1"),
+                    ResourceLocation.tryParse("eidoplants:plume2"),
                     ResourceLocation.tryParse("eidoplants:plume2"),
                     ResourceLocation.tryParse("eidoplants:plume3")
                 ),
@@ -178,6 +213,9 @@ public class ModWorldGen {
             NbtTreeFeatureConfig cfg = new NbtTreeFeatureConfig(
                 java.util.Arrays.asList(
                     ResourceLocation.tryParse("eidoplants:sakura1"),
+                    ResourceLocation.tryParse("eidoplants:sakura1"),
+                    ResourceLocation.tryParse("eidoplants:sakura1"),
+                    ResourceLocation.tryParse("eidoplants:sakura2"),
                     ResourceLocation.tryParse("eidoplants:sakura2"),
                     ResourceLocation.tryParse("eidoplants:sakura3"),
                     ResourceLocation.tryParse("eidoplants:sakura4")
@@ -197,6 +235,9 @@ public class ModWorldGen {
             NbtTreeFeatureConfig cfg = new NbtTreeFeatureConfig(
                 java.util.Arrays.asList(
                     ResourceLocation.tryParse("eidoplants:sequoia1"),
+                    ResourceLocation.tryParse("eidoplants:sequoia1"),
+                    ResourceLocation.tryParse("eidoplants:sequoia1"),
+                    ResourceLocation.tryParse("eidoplants:sequoia2"),
                     ResourceLocation.tryParse("eidoplants:sequoia2"),
                     ResourceLocation.tryParse("eidoplants:sequoia3"),
                     ResourceLocation.tryParse("eidoplants:sequoia4")

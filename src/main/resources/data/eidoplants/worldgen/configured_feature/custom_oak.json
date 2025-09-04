@@ -3,6 +3,9 @@
   "config": {
     "templates": [
       "eidoplants:oak1",
+      "eidoplants:oak1",
+      "eidoplants:oak1",
+      "eidoplants:oak2",
       "eidoplants:oak2",
       "eidoplants:oak3"
     ],

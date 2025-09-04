@@ -3,6 +3,9 @@
   "config": {
     "templates": [
       "eidoplants:sequoia1",
+      "eidoplants:sequoia1",
+      "eidoplants:sequoia1",
+      "eidoplants:sequoia2",
       "eidoplants:sequoia2",
       "eidoplants:sequoia3",
       "eidoplants:sequoia4"
