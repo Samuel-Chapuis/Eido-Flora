@@ -16,6 +16,10 @@ public class ModCreativeModTabs {
             .icon(() -> new ItemStack(ModBlocks.JUNGLE_GRASS.get().asItem()))
             .title(Component.translatable("creativetab.plants_eidoplants"))
             .displayItems((pParameters, pOutput) -> {
+
+                pOutput.accept(ModBlocks.REPLICATE_GLASS.get());
+                pOutput.accept(ModBlocks.REPLICATE_GLASS_PANE.get());
+
                 // Add blocks to creative tab
                 pOutput.accept(ModBlocks.JUNGLE_GRASS.get());
                 pOutput.accept(ModBlocks.JUNGLE_GRASS_LIGHT.get());

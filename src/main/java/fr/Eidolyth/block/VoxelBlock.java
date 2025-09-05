@@ -27,6 +27,13 @@ public class VoxelBlock extends Block {
         this.registerDefaultState(this.defaultBlockState().setValue(FACING, Direction.NORTH));
     }
 
+    @Override
+    public boolean skipRendering(BlockState state, BlockState adjacentState, Direction side) {
+        // Cache la face si le bloc voisin est le même
+        if (adjacentState.is(state.getBlock())) return true;
+        return super.skipRendering(state, adjacentState, side);
+    }
+
     public void setshape(VoxelShape shape) {
         SHAPE = shape;
     }

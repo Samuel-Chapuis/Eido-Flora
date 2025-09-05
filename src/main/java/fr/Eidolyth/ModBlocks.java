@@ -7,7 +7,6 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
-import net.minecraft.world.level.block.SoundType;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.DeferredHolder;
@@ -27,6 +26,26 @@ import fr.Eidolyth.block.plants.CutoutFlowerBlock;
 
 public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(BuiltInRegistries.BLOCK, EidoPlants.MODID);
+
+    public static final DeferredHolder<Block, Block> REPLICATE_GLASS = registerBlock("replicateglass", () -> new VoxelBlock(BlockBehaviour.Properties
+        .of()
+        .noOcclusion() // indispensable pour les blocs translucides
+        .isSuffocating((s, g, p) -> false)
+        .isViewBlocking((s, g, p) -> false)
+        .isRedstoneConductor((s, g, p) -> false)
+        .strength(0.3F)
+        .sound(SoundType.GLASS)
+    ));
+
+    public static final DeferredHolder<Block, Block> RESEARCH_TABLE = registerBlock("research_table", () -> new VoxelBlock(BlockBehaviour.Properties
+        .of()
+        .noOcclusion()
+        .isSuffocating((s, g, p) -> false)
+        .isViewBlocking((s, g, p) -> false)
+        .isRedstoneConductor((s, g, p) -> false)
+        .strength(0.3F)
+        .sound(SoundType.WOOD)
+    ));
 
     public static final DeferredHolder<Block, Block> JUNGLE_GRASS = registerBlock("junglegrass", () -> new VoxelBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().instabreak().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ).pushReaction(PushReaction.DESTROY)));
     public static final DeferredHolder<Block, Block> JUNGLE_GRASS_LIGHT = registerBlock("junglegrasslight", () -> new VoxelBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().instabreak().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ).pushReaction(PushReaction.DESTROY)));
