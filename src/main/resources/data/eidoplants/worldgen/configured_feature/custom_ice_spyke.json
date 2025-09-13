@@ -1,0 +1,19 @@
+{
+  "type": "eidoplants:nbt_tree",
+  "config": {
+    "templates": [
+      "eidoplants:ice_spyke1",
+      "eidoplants:ice_spyke2",
+      "eidoplants:ice_spyke3",
+      "eidoplants:ice_spyke4",
+      "eidoplants:ice_spyke5",
+      "eidoplants:ice_spyke6",
+      "eidoplants:ice_spyke10",
+      "eidoplants:ice_spyke11"
+    ],
+    "rotate": true,
+    "mirror": true,
+    "ignore_air": true,
+    "y_offset": -1
+  }
+}

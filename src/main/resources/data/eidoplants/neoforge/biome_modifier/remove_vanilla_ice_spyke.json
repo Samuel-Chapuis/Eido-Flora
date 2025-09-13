@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:remove_features",
+  "biomes": "#minecraft:is_overworld",
+  "features": "#eidoplants:vanilla_ice_spyke",
+  "steps": ["vegetal_decoration"]
+}

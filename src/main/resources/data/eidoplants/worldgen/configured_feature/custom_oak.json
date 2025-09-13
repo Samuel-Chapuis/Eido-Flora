@@ -2,6 +2,10 @@
   "type": "eidoplants:nbt_tree",
   "config": {
     "templates": [
+      "eidoplants:min_oak1",
+      "eidoplants:min_oak1",
+      "eidoplants:min_oak2",
+      "eidoplants:min_oak2",
       "eidoplants:oak1",
       "eidoplants:oak1",
       "eidoplants:oak1",

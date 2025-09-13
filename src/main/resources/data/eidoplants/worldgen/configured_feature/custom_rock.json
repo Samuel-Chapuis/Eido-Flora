@@ -1,0 +1,19 @@
+{
+  "type": "eidoplants:nbt_tree",
+  "config": {
+    "templates": [
+      "eidoplants:rock1",
+      "eidoplants:rock2",
+      "eidoplants:rock3",
+      "eidoplants:rock4",
+      "eidoplants:rock5",
+      "eidoplants:rock6",
+      "eidoplants:rock7",
+      "eidoplants:rock8"
+    ],
+    "rotate": true,
+    "mirror": true,
+    "ignore_air": true,
+    "y_offset": -1
+  }
+}

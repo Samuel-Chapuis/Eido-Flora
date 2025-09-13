@@ -1,0 +1,15 @@
+{
+  "type": "eidoplants:nbt_tree",
+  "config": {
+    "templates": [
+      "eidoplants:min_jungle1",
+      "eidoplants:min_jungle2",
+      "eidoplants:min_oak1",
+      "eidoplants:min_oak2"
+    ],
+    "rotate": true,
+    "mirror": true,
+    "ignore_air": true,
+    "y_offset": -1
+  }
+}

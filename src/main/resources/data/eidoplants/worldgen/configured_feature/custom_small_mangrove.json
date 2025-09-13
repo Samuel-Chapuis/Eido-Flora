@@ -1,0 +1,16 @@
+{
+  "type": "eidoplants:nbt_tree",
+  "config": {
+    "templates": [
+      "eidoplants:min_mangrove1",
+      "eidoplants:min_mangrove2",
+      "eidoplants:min_mangrove3",
+      "eidoplants:min_mangrove4",
+      "eidoplants:min_mangrove5"
+    ],
+    "rotate": true,
+    "mirror": true,
+    "ignore_air": true,
+    "y_offset": -3
+  }
+}
