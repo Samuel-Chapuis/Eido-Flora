@@ -2,12 +2,10 @@
   "type": "eidoplants:nbt_tree",
   "config": {
     "templates": [
-      "eidoplants:oak1",
-      "eidoplants:oak1",
-      "eidoplants:oak1",
-      "eidoplants:oak2",
-      "eidoplants:oak2",
-      "eidoplants:oak3"
+      "eidoplants:bush1",
+      "eidoplants:bush2",
+      "eidoplants:min_oak1",
+      "eidoplants:min_oak2"
     ],
     "rotate": true,
     "mirror": true,

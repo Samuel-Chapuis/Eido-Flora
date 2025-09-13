@@ -17,6 +17,12 @@
     "minecraft:trees_windswept_forest",
     "minecraft:trees_windswept_hills",
     "minecraft:trees_windswept_savanna",
-    "minecraft:dark_forest_vegetation"
+    "minecraft:dark_forest_vegetation",
+    "minecraft:ice_spike",
+    "minecraft:trees_flower_forest",
+    "minecraft:trees_water",
+    "minecraft:rooted_azalea_tree",
+    "minecraft:trees_cherry",
+    "minecraft:trees_mangrove"
   ]
 }

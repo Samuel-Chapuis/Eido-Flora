@@ -1,8 +1,0 @@
-{
-  "type": "neoforge:remove_features",
-  "biomes": [
-    "minecraft:swamp"
-  ],
-  "features": "#eidoplants:vanilla_mangrove",
-  "steps": ["vegetal_decoration"]
-}

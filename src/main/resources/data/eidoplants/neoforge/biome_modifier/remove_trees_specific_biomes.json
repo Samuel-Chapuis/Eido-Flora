@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:remove_features",
+  "biomes": [
+    "minecraft:cherry_grove",
+    "minecraft:mangrove_swamp",
+    "minecraft:old_growth_birch_forest"
+  ],
+  "features": "#eidoplants:trees_to_remove_specific",
+  "steps": ["vegetal_decoration"]
+}
