@@ -1,7 +1,7 @@
 {
   "feature": "eidoplants:custom_rock",
   "placement": [
-    { "type": "minecraft:count", "count": 3 },
+    { "type": "minecraft:count", "count": 0.3 },
     { "type": "minecraft:in_square" },
     { "type": "minecraft:heightmap", "heightmap": "OCEAN_FLOOR" },
     { "type": "minecraft:surface_water_depth_filter", "max_water_depth": 0 },
@@ -11,7 +11,7 @@
         "predicates": [
           { "type": "minecraft:replaceable" },
           { "type": "minecraft:matching_blocks",
-            "offset": [0,-1,0],
+            "offset": [0,-4,0],
             "blocks": ["minecraft:grass_block","minecraft:dirt","minecraft:stone","minecraft:gravel","minecraft:sand","minecraft:sandstone"]
           }
         ]

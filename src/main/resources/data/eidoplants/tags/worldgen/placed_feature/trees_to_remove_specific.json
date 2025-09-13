@@ -4,9 +4,6 @@
     "minecraft:trees_cherry",
     "minecraft:trees_mangrove",
     "minecraft:trees_birch",
-    "minecraft:birch_tall",
-    "eidoplants:custom_mangrove_placed",
-    "eidoplants:custom_birch_placed",
-    "eidoplants:custom_sakura_placed"
+    "minecraft:birch_tall"
   ]
 }

@@ -1,6 +1,8 @@
 {
   "type": "neoforge:remove_features",
-  "biomes": "#minecraft:is_overworld",
-  "features": "#eidoplants:vanilla_ice_spyke",
+  "biomes": [
+    "minecraft:ice_spikes"
+  ],
+  "features": "minecraft:ice_spike",
   "steps": ["vegetal_decoration"]
 }
