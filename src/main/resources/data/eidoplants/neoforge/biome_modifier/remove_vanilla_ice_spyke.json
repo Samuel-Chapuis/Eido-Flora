@@ -4,5 +4,5 @@
     "minecraft:ice_spikes"
   ],
   "features": "minecraft:ice_spike",
-  "steps": ["vegetal_decoration"]
+  "steps": ["local_modifications"]
 }
