@@ -3,8 +3,15 @@
   "biomes": [
     "minecraft:cherry_grove",
     "minecraft:mangrove_swamp",
-    "minecraft:old_growth_birch_forest"
+    "minecraft:old_growth_birch_forest",
+    "minecraft:wooded_badlands",
+    "minecraft:bamboo_jungle"
   ],
   "features": "#eidoplants:trees_to_remove_specific",
-  "steps": ["vegetal_decoration"]
+  "steps": [
+    "raw_generation",
+    "local_modifications",
+    "surface_structures",
+    "vegetal_decoration"
+  ]
 }

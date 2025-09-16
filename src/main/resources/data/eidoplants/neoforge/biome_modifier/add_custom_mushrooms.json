@@ -1,0 +1,8 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": [
+    "minecraft:mushroom_fields"
+  ],
+  "features": "eidoplants:custom_mushrooms_placed",
+  "step": "vegetal_decoration"
+}
