@@ -4,7 +4,8 @@
   "features": [
     "eidoplants:more_flowers_placed",
     "eidoplants:more_grass_placed",
-    "eidoplants:more_tall_grass_placed"
+    "eidoplants:more_tall_grass_placed",
+    "eidoplants:small_oak_bush_placed"
   ],
   "step": "vegetal_decoration"
 }
