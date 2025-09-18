@@ -17,6 +17,9 @@ import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.level.material.PushReaction;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.world.level.block.FarmBlock;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import javax.annotation.Nonnull;
 
@@ -88,7 +91,8 @@ public class CattailBlock extends DoublePlantBlock implements SimpleWaterloggedB
             BlockState below = world.getBlockState(pos.below());
             return below.getBlock() == this && below.getValue(HALF) == DoubleBlockHalf.LOWER;
         } else {
-            return super.canSurvive(state, world, pos);
+            BlockState below = world.getBlockState(pos.below());
+            return below.is(BlockTags.DIRT) || below.is(BlockTags.SAND) || below.getBlock() == Blocks.MUD || below.getBlock() instanceof FarmBlock;
         }
     }
 }
