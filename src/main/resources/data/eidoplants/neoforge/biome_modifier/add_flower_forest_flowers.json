@@ -1,0 +1,16 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": ["minecraft:flower_forest"],
+  "features": [
+    "eidoplants:lilac_flowers_placed",
+    "eidoplants:peony_flowers_placed",
+    "eidoplants:azure_bluet_flowers_placed",
+    "eidoplants:white_tulip_flowers_placed",
+    "eidoplants:allium_flowers_placed",
+    "eidoplants:pink_petals_flowers_placed",
+    "eidoplants:more_grass_placed",
+    "eidoplants:more_tall_grass_placed",
+    "eidoplants:spring_leaf_litter_patch_placed"
+  ],
+  "step": "vegetal_decoration"
+}
