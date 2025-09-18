@@ -1,8 +1,8 @@
 {
   "type": "neoforge:add_features",
-  "biomes": ["minecraft:beach"],
+  "biomes": "#minecraft:is_overworld",
   "features": [
-    "eidoplants:cattails_beach_placed"
+    "eidoplants:cattails_placed"
   ],
   "step": "vegetal_decoration"
 }

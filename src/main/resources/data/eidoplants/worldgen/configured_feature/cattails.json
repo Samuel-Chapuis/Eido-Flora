@@ -31,7 +31,14 @@
                 "type": "minecraft:matching_blocks",
                 "blocks": [
                   "minecraft:sand",
-                  "minecraft:red_sand"
+                  "minecraft:red_sand",
+                  "minecraft:grass_block",
+                  "minecraft:dirt",
+                  "minecraft:coarse_dirt",
+                  "minecraft:podzol",
+                  "minecraft:clay",
+                  "minecraft:gravel",
+                  "minecraft:mud"
                 ],
                 "offset": [
                   0,
@@ -40,30 +47,14 @@
                 ]
               },
               {
-                "type": "minecraft:any_of",
-                "predicates": [
-                  {
-                    "type": "minecraft:matching_blocks",
-                    "blocks": [
-                      "minecraft:air"
-                    ],
-                    "offset": [
-                      0,
-                      0,
-                      0
-                    ]
-                  },
-                  {
-                    "type": "minecraft:matching_blocks",
-                    "blocks": [
-                      "minecraft:water"
-                    ],
-                    "offset": [
-                      0,
-                      0,
-                      0
-                    ]
-                  }
+                "type": "minecraft:matching_blocks",
+                "blocks": [
+                  "minecraft:water"
+                ],
+                "offset": [
+                  0,
+                  0,
+                  0
                 ]
               }
             ]
