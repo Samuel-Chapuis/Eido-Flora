@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": ["minecraft:plains"],
+  "features": "eidoplants:custom_forest_decoration_plains_placed",
+  "step": "vegetal_decoration"
+}
