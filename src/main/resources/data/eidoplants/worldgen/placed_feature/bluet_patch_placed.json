@@ -1,5 +1,5 @@
 {
-  "feature": "eidoplants:spring_leaf_litter_patch",
+  "feature": "eidoplants:bluet_patch",
   "placement": [
     { "type": "minecraft:count", "count": 20 },
     { "type": "minecraft:in_square" },

@@ -1,8 +1,8 @@
 {
   "type": "minecraft:random_patch",
   "config": {
-    "tries": 30,
-    "xz_spread": 20,
+    "tries": 40,
+    "xz_spread": 15,
     "y_spread": 3,
     "feature": {
       "feature": {
@@ -13,7 +13,37 @@
             "entries": [
               {
                 "data": {
-                  "Name": "minecraft:azure_bluet"
+                  "Name": "eidoplants:bluet",
+                  "Properties": {
+                    "flower_amount": "1"
+                  }
+                },
+                "weight": 4
+              },
+              {
+                "data": {
+                  "Name": "eidoplants:bluet",
+                  "Properties": {
+                    "flower_amount": "2"
+                  }
+                },
+                "weight": 3
+              },
+              {
+                "data": {
+                  "Name": "eidoplants:bluet",
+                  "Properties": {
+                    "flower_amount": "3"
+                  }
+                },
+                "weight": 2
+              },
+              {
+                "data": {
+                  "Name": "eidoplants:bluet",
+                  "Properties": {
+                    "flower_amount": "4"
+                  }
                 },
                 "weight": 1
               }
