@@ -1,0 +1,11 @@
+{
+  "type": "neoforge:remove_features",
+  "biomes": [
+    "minecraft:swamp",
+    "minecraft:mangrove_swamp"
+  ],
+  "features": [
+    "eidoplants:cattails_placed"
+  ],
+  "steps": ["vegetal_decoration"]
+}
