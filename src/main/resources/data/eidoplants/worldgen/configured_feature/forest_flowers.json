@@ -1,7 +1,7 @@
 {
   "type": "minecraft:random_patch",
   "config": {
-    "tries": 200,
+    "tries": 100,
     "xz_spread": 20,
     "y_spread": 3,
     "feature": {
@@ -13,31 +13,13 @@
             "entries": [
               {
                 "data": {
-                  "Name": "eidoplants:hibiscus"
-                },
-                "weight": 5
-              },
-              {
-                "data": {
-                  "Name": "minecraft:cornflower"
-                },
-                "weight": 1
-              },
-              {
-                "data": {
                   "Name": "minecraft:lily_of_the_valley"
                 },
-                "weight": 1
+                "weight": 2
               },
               {
                 "data": {
                   "Name": "minecraft:oxeye_daisy"
-                },
-                "weight": 1
-              },
-              {
-                "data": {
-                  "Name": "minecraft:allium"
                 },
                 "weight": 1
               },
@@ -49,7 +31,7 @@
               },
               {
                 "data": {
-                  "Name": "minecraft:blue_orchid"
+                  "Name": "minecraft:poppy"
                 },
                 "weight": 1
               }
