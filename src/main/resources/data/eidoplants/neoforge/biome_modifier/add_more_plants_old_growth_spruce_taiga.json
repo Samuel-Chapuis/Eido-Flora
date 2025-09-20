@@ -1,0 +1,16 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": ["minecraft:old_growth_spruce_taiga"],
+  "features": [
+    "eidoplants:tulips_flowers_placed",
+    "eidoplants:poppies_flowers_placed",
+    "eidoplants:other_flowers_placed",
+    "eidoplants:more_grass_placed",
+    "eidoplants:more_tall_grass_placed",
+    "eidoplants:more_ferns_placed",
+    "eidoplants:more_large_ferns_placed",
+    "eidoplants:small_oak_bush_placed",
+    "eidoplants:leaf_litter_patch_placed"
+  ],
+  "step": "vegetal_decoration"
+}

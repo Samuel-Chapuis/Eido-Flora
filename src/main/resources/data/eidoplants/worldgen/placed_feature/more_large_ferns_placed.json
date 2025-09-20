@@ -1,5 +1,5 @@
 {
-  "feature": "minecraft:patch_grass",
+  "feature": "eidoplants:more_large_ferns",
   "placement": [
     { "type": "minecraft:count", "count": 20 },
     { "type": "minecraft:in_square" },
