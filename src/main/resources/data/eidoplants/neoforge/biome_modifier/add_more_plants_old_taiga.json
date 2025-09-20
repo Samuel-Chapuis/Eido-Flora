@@ -5,8 +5,8 @@
     "minecraft:old_growth_pine_taiga"
   ],
   "features": [
-    "eidoplants:forest_flowers_placed",
-    "eidoplants:rose_bush_flowers_placed",
+    "eidoplants:old_taiga_flowers_placed",
+    "eidoplants:pitcher_plant_placed",
     "eidoplants:more_grass_placed",
     "eidoplants:more_tall_grass_placed",
     "eidoplants:more_ferns_placed",

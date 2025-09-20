@@ -1,0 +1,17 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": [
+    "minecraft:taiga"
+  ],
+  "features": [
+    "eidoplants:forest_flowers_placed",
+    "eidoplants:rose_bush_flowers_placed",
+    "eidoplants:more_grass_placed",
+    "eidoplants:more_tall_grass_placed",
+    "eidoplants:more_ferns_placed",
+    "eidoplants:more_large_ferns_placed",
+    "eidoplants:small_oak_bush_placed",
+    "eidoplants:leaf_litter_patch_placed"
+  ],
+  "step": "vegetal_decoration"
+}
