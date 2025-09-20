@@ -1,0 +1,8 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": [
+    "minecraft:flower_forest"
+  ],
+  "features": "eidoplants:custom_plume_placed_addition",
+  "step": "vegetal_decoration"
+}

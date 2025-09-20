@@ -3,7 +3,8 @@
   "biomes": [
     "minecraft:taiga",
     "minecraft:old_growth_pine_taiga",
-    "minecraft:windswept_hills"
+    "minecraft:windswept_hills",
+    "minecraft:flower_forest"
   ],
   "features": "eidoplants:custom_pine_placed",
   "step": "vegetal_decoration"
