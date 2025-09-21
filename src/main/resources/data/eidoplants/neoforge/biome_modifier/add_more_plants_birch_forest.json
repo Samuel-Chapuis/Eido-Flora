@@ -1,0 +1,14 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": [
+    "minecraft:birch_forest"
+  ],
+  "features": [
+    "eidoplants:birch_forest_flowers_placed",
+    "eidoplants:sunflower_flowers_placed",
+    "eidoplants:more_grass_placed",
+    "eidoplants:small_oak_bush_placed",
+    "eidoplants:spring_leaf_litter_patch_placed"
+  ],
+  "step": "vegetal_decoration"
+}

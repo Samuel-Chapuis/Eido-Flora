@@ -1,5 +1,5 @@
 {
-  "feature": "eidoplants:rose_bush",
+  "feature": "eidoplants:birch_forest_flowers",
   "placement": [
     { "type": "minecraft:count", "count": 2 },
     { "type": "minecraft:in_square" },
