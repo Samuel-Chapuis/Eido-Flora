@@ -1,0 +1,8 @@
+{
+  "loader": "minecraft:block",
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "eidoplants:block/pink_petals",
+    "particle": "eidoplants:block/pink_petals"
+  }
+}
