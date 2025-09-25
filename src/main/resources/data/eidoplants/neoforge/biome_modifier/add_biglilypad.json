@@ -3,7 +3,7 @@
   "biomes": [
     "minecraft:forest",
     "minecraft:flower_forest",
-  "minecraft:dark_forest",
+    "minecraft:dark_forest",
     "minecraft:birch_forest",
     "minecraft:taiga",
     "minecraft:old_growth_pine_taiga",
