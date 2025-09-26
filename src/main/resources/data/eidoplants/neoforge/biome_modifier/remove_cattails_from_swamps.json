@@ -2,7 +2,11 @@
   "type": "neoforge:remove_features",
   "biomes": [
     "minecraft:swamp",
-    "minecraft:mangrove_swamp"
+    "minecraft:mangrove_swamp",
+    "minecraft:snowy_plains",
+    "minecraft:snowy_taiga",
+    "minecraft:frozen_river",
+    "minecraft:frozen_ocean"
   ],
   "features": [
     "eidoplants:cattails_placed"

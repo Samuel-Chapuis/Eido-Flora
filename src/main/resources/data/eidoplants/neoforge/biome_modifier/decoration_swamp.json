@@ -1,0 +1,17 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": [
+    "minecraft:swamp",
+    "minecraft:mangrove_swamp"
+  ],
+  "features": [
+    "eidoplants:swamp_flowers_placed",
+    "eidoplants:swamp_cattails_mud_placed",
+    "eidoplants:more_grass_placed",
+    "eidoplants:more_tall_grass_placed",
+    "eidoplants:more_ferns_placed",
+    "eidoplants:small_oak_bush_placed",
+    "eidoplants:spring_leaf_litter_patch_placed"
+  ],
+  "step": "vegetal_decoration"
+}
