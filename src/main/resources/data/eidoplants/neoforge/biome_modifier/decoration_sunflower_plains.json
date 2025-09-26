@@ -1,0 +1,12 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": [
+    "minecraft:sunflower_plains"
+  ],
+  "features": [
+    "eidoplants:sunflower_flowers_boost_placed",
+    "eidoplants:wildflower_patch_placed",
+    "eidoplants:dandelion_flowers_placed"
+  ],
+  "step": "vegetal_decoration"
+}
