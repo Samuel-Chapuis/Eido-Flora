@@ -1,7 +1,8 @@
 {
   "type": "neoforge:add_features",
   "biomes": [
-    "minecraft:mangrove_swamp"
+    "minecraft:mangrove_swamp",
+    "minecraft:jungle"
   ],
   "features": "eidoplants:custom_mangrove_placed",
   "step": "vegetal_decoration"
