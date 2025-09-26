@@ -11,6 +11,7 @@
   ],
   "features": [
     "eidoplants:big_dead_bush_placed",
+    "eidoplants:cactus_flower_placed",
     "eidoplants:big_dead_tree_placed"
   ],
   "step": "vegetal_decoration"
