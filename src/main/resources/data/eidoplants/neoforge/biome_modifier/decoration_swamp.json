@@ -6,6 +6,7 @@
   ],
   "features": [
     "eidoplants:swamp_flowers_placed",
+    "eidoplants:algae_placed",
     "eidoplants:swamp_cattails_mud_placed",
     "eidoplants:more_grass_placed",
     "eidoplants:more_tall_grass_placed",

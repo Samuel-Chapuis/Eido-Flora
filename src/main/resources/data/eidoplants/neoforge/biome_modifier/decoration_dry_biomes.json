@@ -1,0 +1,17 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": [
+    "minecraft:desert",
+    "minecraft:badlands",
+    "minecraft:eroded_badlands",
+    "minecraft:wooded_badlands",
+    "minecraft:savanna",
+    "minecraft:savanna_plateau",
+    "minecraft:windswept_savanna"
+  ],
+  "features": [
+    "eidoplants:big_dead_bush_placed",
+    "eidoplants:big_dead_tree_placed"
+  ],
+  "step": "vegetal_decoration"
+}
