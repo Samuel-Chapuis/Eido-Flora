@@ -3,13 +3,13 @@
   "biomes": [
     "minecraft:savanna",
     "minecraft:savanna_plateau",
-    "eidoplants:more_grass_placed",
-    "eidoplants:more_tall_grass_placed",
-    "eidoplants:small_oak_bush_placed",
     "minecraft:windswept_savanna"
   ],
   "features": [
-    "eidoplants:savanna_flowers_placed"
+    "eidoplants:savanna_flowers_placed",
+    "eidoplants:more_grass_placed",
+    "eidoplants:more_tall_grass_placed",
+    "eidoplants:small_oak_bush_placed"
   ],
   "step": "vegetal_decoration"
 }

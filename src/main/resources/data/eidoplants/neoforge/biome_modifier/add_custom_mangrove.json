@@ -4,6 +4,6 @@
     "minecraft:mangrove_swamp",
     "minecraft:jungle"
   ],
-  "features": "eidoplants:custom_mangrove_placed",
+  "features": [ "eidoplants:custom_mangrove_placed" ],
   "step": "vegetal_decoration"
 }
