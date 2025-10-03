@@ -1,49 +1,49 @@
-# Syntaxe des messages de commit
+# Commit Message Syntax
 
-Les messages de commit doivent suivre une convention claire et standardisée afin de garantir la lisibilité et la traçabilité du projet. Ce standard s'inspire des [Conventional Commits](https://www.conventionalcommits.org/) et vise à clarifier le type de changement, son contexte, et à structurer le développement.
+Commit messages should follow a clear and standardized convention to ensure readability and traceability of the project. This standard is inspired by [Conventional Commits](https://www.conventionalcommits.org/) and aims to clarify the type of change, its context, and to structure development.
 
-## Format général
+## General Format
 
-- **type** : Le type de changement (voir la liste ci-dessous).
-- **scope** (optionnel) : La partie du projet concernée par le changement (par ex. un service, un module).
-- **message** : Une courte description des changements (à l’impératif et au présent).
+- **type**: The type of change (see the list below).
+- **scope** (optional): The part of the project affected by the change (e.g., a service, a module).
+- **message**: A short description of the changes (in imperative and present tense).
 
-## Types de commits
+## Commit Types
 
-- **feat** : Ajout d’une nouvelle fonctionnalité.
-  - Exemple : `feat(auth-utilisateur) : ajout de la fonctionnalité de connexion`
+- **feat**: Addition of a new feature.
+  - Example: `feat(auth-user): add login functionality`
 
-- **fix** : Correction de bug.
-  - Exemple : `fix(paiement) : corrige le problème d’arrondi dans le calcul des factures`
+- **fix**: Bug fix.
+  - Example: `fix(payment): fix rounding issue in invoice calculation`
 
-- **chore** : Tâches mineures sans impact sur le code applicatif (ex. mise à jour de dépendances).
-  - Exemple : `chore : mise à jour des dépendances`
+- **chore**: Minor tasks with no impact on application code (e.g., dependency updates).
+  - Example: `chore: update dependencies`
 
-- **docs** : Modifications de la documentation.
-  - Exemple : `docs(readme) : ajout des instructions d’utilisation`
+- **docs**: Documentation changes.
+  - Example: `docs(readme): add usage instructions`
 
-- **style** : Modifications de style de code (indentation, mise en forme) sans impact fonctionnel.
-  - Exemple : `style : correction de l’indentation`
+- **style**: Code style changes (indentation, formatting) with no functional impact.
+  - Example: `style: fix indentation`
 
-- **refactor** : Refactorisation de code sans modification du comportement.
-  - Exemple : `refactor(service-commande) : simplifie le déroulement d’une méthode`
+- **refactor**: Code refactoring without changing behavior.
+  - Example: `refactor(order-service): simplify method flow`
 
-- **test** : Ajout ou modification de tests.
-  - Exemple : `test(service-utilisateur) : ajout de tests unitaires`
+- **test**: Add or modify tests.
+  - Example: `test(user-service): add unit tests`
 
-- **perf** : Amélioration des performances.
-  - Exemple : `perf(api) : optimisation des requêtes vers la base de données`
+- **perf**: Performance improvements.
+  - Example: `perf(api): optimize database queries`
 
-- **ci** : Modifications liées à l’intégration continue ou aux outils de build.
-  - Exemple : `ci : mise à jour de la configuration GitHub Actions`
+- **ci**: Changes related to continuous integration or build tools.
+  - Example: `ci: update GitHub Actions configuration`
 
-## Bonnes pratiques
+## Best Practices
 
-- **Messages clairs et précis** : Le message doit être explicite et tenir en une seule ligne. Les détails supplémentaires peuvent figurer dans le corps du commit.
-- **Présent à l’impératif** : Utilisez le présent à l’impératif pour décrire ce que fait le commit, ex. "ajoute", "corrige", "met à jour".
-- **Scope optionnel** : Le scope est utile pour indiquer la zone du projet concernée, mais peut être omis si non pertinent.
-- **Évitez les termes vagues** : Ne pas utiliser des termes comme `update`, `change` ou `improve` sans précision.
+- **Clear and precise messages**: The message should be explicit and fit on a single line. Additional details can be included in the commit body.
+- **Imperative present tense**: Use the imperative present tense to describe what the commit does, e.g., "add", "fix", "update".
+- **Optional scope**: The scope is useful to indicate the affected area of the project but can be omitted if not relevant.
+- **Avoid vague terms**: Do not use terms like `update`, `change`, or `improve` without specifics.
 
-## Exemples de commit
+## Commit Examples
 
-- **Ajout d’une fonctionnalité** :
+- **Adding a feature**:
