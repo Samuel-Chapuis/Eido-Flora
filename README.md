@@ -96,7 +96,13 @@ If you want, I can expand any of the subfolders above into a full file list (for
 4. Submit a pull request for review by another team member.
 
 ## Authors
-- Samuel Chapuis
+- Samuel Chapuis (Thorid4n) — Project Lead
+
+## Acknowledgments
+This section recognizes the main contributors to the project and their roles.
+
+- Avixy — Developer
+- Fabrice Lozac'h (Fab0uu) — Network Developer
 
 ## License
 This project is licensed under the MIT License.
