@@ -1,0 +1,14 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": [
+    "minecraft:jungle",
+    "minecraft:sparse_jungle",
+    "minecraft:bamboo_jungle"
+  ],
+  "features": [
+    "eidoplants:jungle_flowers_placed",
+    "eidoplants:more_tall_grass_placed",
+    "eidoplants:small_oak_bush_placed"
+  ],
+  "step": "vegetal_decoration"
+}

@@ -28,8 +28,8 @@ import fr.Eidolyth.block.plants.CutoutFlowerBlock;
 public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(BuiltInRegistries.BLOCK, EidoPlants.MODID);
 
-    public static final DeferredHolder<Block, Block> JUNGLE_GRASS = registerBlock("junglegrass", () -> new VoxelBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().instabreak().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ).pushReaction(PushReaction.DESTROY)));
-    public static final DeferredHolder<Block, Block> JUNGLE_GRASS_LIGHT = registerBlock("junglegrasslight", () -> new VoxelBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().instabreak().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ).pushReaction(PushReaction.DESTROY)));
+    public static final DeferredHolder<Block, Block> JUNGLE_GRASS = registerBlock("junglegrass", () -> new VoxelBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().instabreak().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ).pushReaction(PushReaction.DESTROY).noOcclusion()));
+    public static final DeferredHolder<Block, Block> JUNGLE_GRASS_LIGHT = registerBlock("junglegrasslight", () -> new VoxelBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().instabreak().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ).pushReaction(PushReaction.DESTROY).noOcclusion()));
 
     public static final DeferredHolder<Block, Block> GRAPE_VINE = registerBiomColoredBlock("grapevine", () -> new BiomColoredBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noOcclusion().strength(0.2F).sound(SoundType.GRASS)));
     public static final DeferredHolder<Block, Block> GRAPY_GRAPE_VINE = registerBiomColoredBlock("grapygrapevine", () -> new BiomColoredBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noOcclusion().strength(0.2F).sound(SoundType.GRASS)));
