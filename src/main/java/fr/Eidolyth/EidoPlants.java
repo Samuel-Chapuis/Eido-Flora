@@ -34,8 +34,8 @@ public class EidoPlants {
         ModBlocks.register(modEventBus);
         ModItems.register(modEventBus);
         ModCreativeModTabs.register(modEventBus);
-    ModFeatures.register(modEventBus);
-    ModWorldGen.register(modEventBus);
+        ModFeatures.register(modEventBus);
+        ModWorldGen.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in.
         NeoForge.EVENT_BUS.register(this);
