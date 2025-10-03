@@ -1,6 +1,6 @@
 <p align="left" style="display: flex; gap: 16px; align-items: center;">
 	<img src="doc/logo.png" alt="Image 1" style="height:80px; width:80px; object-fit:cover;">
-	<img src="doc/Plante.png" alt="Image 2" style="height:80px; width:80px; object-fit:cover;">
+	<img src="doc/plante.png" alt="Image 2" style="height:80px; width:80px; object-fit:cover;">
 </p>
 
 # Eido-Flora
