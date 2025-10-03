@@ -11,6 +11,18 @@ Eido-Flora is part of the Eido project, formerly known as the '4' project. Its g
 ### Français
 Eido-Flora fait partie du projet Eido, anciennement appelé projet '4'. Son objectif est de remplacer la végétation vanilla par des plantes personnalisées afin d’enrichir la flore de Minecraft. Il est compatible avec la plupart des mods de génération de terrain.
 
+## Advertisement
+### English
+As mentioned above, Eido-Flora is part of the Eido project mod collection. If you are interested in following the development of the Eido meta-project, feel free to join our server.
+
+### Français
+Comme indiqué plus haut, Eido-Flora fait partie de la collection de mods du projet Eido. Si vous êtes intéressé par le suivi du développement du méta-projet Eido, je vous invite à rejoindre notre serveur.
+
+### Media
+Still with the old name,
+- WebSite : https://mc.berryblue.fr/
+- Discord : https://discord.gg/brwbTkNnTx
+
 ## Showcase
 
 <table>
