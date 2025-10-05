@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "d": {
+      "item": "minecraft:green_dye"
+    },
+    "C": {
+      "item": "minecraft:cauldron"
+    }
+  },
+  "pattern": [
+    "I I",
+    "dCd",
+    "ddd"
+  ],
+  "result": {
+    "count": 1,
+    "id": "eidoplants:watering_pot"
+  }
+}
