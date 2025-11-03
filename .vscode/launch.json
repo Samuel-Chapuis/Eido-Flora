@@ -12,11 +12,11 @@
       "projectName": "EidoPlants",
       "mainClass": "net.neoforged.devlaunch.Main",
       "args": [
-        "@C:\\Dev\\Project\\MC\\EidoPlants\\build\\moddev\\clientRunProgramArgs.txt"
+        "@C:\\Dev\\MC\\EidoPlants\\build\\moddev\\clientRunProgramArgs.txt"
       ],
       "vmArgs": [
-        "@C:\\Dev\\Project\\MC\\EidoPlants\\build\\moddev\\clientRunVmArgs.txt",
-        "-Dfml.modFolders\u003deidoplants%%C:\\Dev\\Project\\MC\\EidoPlants\\bin\\main"
+        "@C:\\Dev\\MC\\EidoPlants\\build\\moddev\\clientRunVmArgs.txt",
+        "-Dfml.modFolders\u003deidoplants%%C:\\Dev\\MC\\EidoPlants\\bin\\main"
       ],
       "cwd": "${workspaceFolder}\\run",
       "env": {},
@@ -34,11 +34,11 @@
       "projectName": "EidoPlants",
       "mainClass": "net.neoforged.devlaunch.Main",
       "args": [
-        "@C:\\Dev\\Project\\MC\\EidoPlants\\build\\moddev\\dataRunProgramArgs.txt"
+        "@C:\\Dev\\MC\\EidoPlants\\build\\moddev\\dataRunProgramArgs.txt"
       ],
       "vmArgs": [
-        "@C:\\Dev\\Project\\MC\\EidoPlants\\build\\moddev\\dataRunVmArgs.txt",
-        "-Dfml.modFolders\u003deidoplants%%C:\\Dev\\Project\\MC\\EidoPlants\\bin\\main"
+        "@C:\\Dev\\MC\\EidoPlants\\build\\moddev\\dataRunVmArgs.txt",
+        "-Dfml.modFolders\u003deidoplants%%C:\\Dev\\MC\\EidoPlants\\bin\\main"
       ],
       "cwd": "${workspaceFolder}\\run",
       "env": {},
@@ -56,11 +56,11 @@
       "projectName": "EidoPlants",
       "mainClass": "net.neoforged.devlaunch.Main",
       "args": [
-        "@C:\\Dev\\Project\\MC\\EidoPlants\\build\\moddev\\gameTestServerRunProgramArgs.txt"
+        "@C:\\Dev\\MC\\EidoPlants\\build\\moddev\\gameTestServerRunProgramArgs.txt"
       ],
       "vmArgs": [
-        "@C:\\Dev\\Project\\MC\\EidoPlants\\build\\moddev\\gameTestServerRunVmArgs.txt",
-        "-Dfml.modFolders\u003deidoplants%%C:\\Dev\\Project\\MC\\EidoPlants\\bin\\main"
+        "@C:\\Dev\\MC\\EidoPlants\\build\\moddev\\gameTestServerRunVmArgs.txt",
+        "-Dfml.modFolders\u003deidoplants%%C:\\Dev\\MC\\EidoPlants\\bin\\main"
       ],
       "cwd": "${workspaceFolder}\\run",
       "env": {},
@@ -78,11 +78,11 @@
       "projectName": "EidoPlants",
       "mainClass": "net.neoforged.devlaunch.Main",
       "args": [
-        "@C:\\Dev\\Project\\MC\\EidoPlants\\build\\moddev\\serverRunProgramArgs.txt"
+        "@C:\\Dev\\MC\\EidoPlants\\build\\moddev\\serverRunProgramArgs.txt"
       ],
       "vmArgs": [
-        "@C:\\Dev\\Project\\MC\\EidoPlants\\build\\moddev\\serverRunVmArgs.txt",
-        "-Dfml.modFolders\u003deidoplants%%C:\\Dev\\Project\\MC\\EidoPlants\\bin\\main"
+        "@C:\\Dev\\MC\\EidoPlants\\build\\moddev\\serverRunVmArgs.txt",
+        "-Dfml.modFolders\u003deidoplants%%C:\\Dev\\MC\\EidoPlants\\bin\\main"
       ],
       "cwd": "${workspaceFolder}\\run",
       "env": {},
