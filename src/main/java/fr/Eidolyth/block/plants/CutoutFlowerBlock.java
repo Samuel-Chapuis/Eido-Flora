@@ -9,6 +9,7 @@ import net.minecraft.world.level.block.PinkPetalsBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import javax.annotation.Nullable;
 
@@ -37,6 +38,7 @@ public class CutoutFlowerBlock extends PinkPetalsBlock implements net.minecraft.
 
     @Override
     public VoxelShape getCollisionShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
-        return FIXED_SHAPE;
+        // No collision so entities (players, items) can pass through like vanilla grass
+        return Shapes.empty();
     }
 }

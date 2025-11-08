@@ -2,6 +2,8 @@ package fr.Eidolyth.block.plants;
 
 import net.minecraft.client.renderer.BiomeColors;
 import net.minecraft.core.BlockPos;
+import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockAndTintGetter;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
@@ -9,6 +11,7 @@ import net.minecraft.world.level.block.PinkPetalsBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import javax.annotation.Nullable;
 
@@ -19,6 +22,21 @@ public class OrangeLeafLitterBlock extends PinkPetalsBlock implements net.minecr
 
     public OrangeLeafLitterBlock(BlockBehaviour.Properties properties) {
         super(properties);
+    }
+
+    @Override
+    public boolean canBeReplaced(BlockState state, BlockPlaceContext useContext) {
+        // Allow being replaced when the player is placing a block item (like grass/dirt replacement behavior)
+        if (useContext.getItemInHand().getItem() instanceof BlockItem) {
+            return true;
+        }
+        // Fallback to parent behavior if present
+        try {
+            return super.canBeReplaced(state, useContext);
+        } catch (AbstractMethodError | NoSuchMethodError e) {
+            // Parent doesn't define canBeReplaced in these mappings; default to false
+            return false;
+        }
     }
 
     @Override
@@ -39,9 +57,10 @@ public class OrangeLeafLitterBlock extends PinkPetalsBlock implements net.minecr
 
     @Override
     public VoxelShape getCollisionShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
-        return FIXED_SHAPE;
+        // No collision so entities (players, items) can pass through like vanilla grass
+        return Shapes.empty();
     }
-
+    
     @Override
     public VoxelShape getVisualShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
         return FIXED_SHAPE;
