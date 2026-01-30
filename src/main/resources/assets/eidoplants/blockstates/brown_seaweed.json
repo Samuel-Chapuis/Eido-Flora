@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "waterlogged=false": { "model": "eidoplants:block/brown_seaweed" },
+    "waterlogged=true": { "model": "eidoplants:block/brown_seaweed" }
+  }
+}
