@@ -27,6 +27,7 @@ import fr.Eidolyth.block.plants.CutoutFlowerBlock;
 import fr.Eidolyth.block.plants.Algae;
 import fr.Eidolyth.block.plants.AlgaeTall;
 import fr.Eidolyth.block.plants.AlgaePlant;
+import fr.Eidolyth.block.plants.AlgaeHead;
 
 public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(BuiltInRegistries.BLOCK, EidoPlants.MODID);
@@ -52,11 +53,19 @@ public class ModBlocks {
     public static final DeferredHolder<Block, Block> RED_ALGAE = registerBlock("red_algae", () -> new AlgaeTall(
         BlockBehaviour.Properties.of().mapColor(MapColor.WATER).noCollission().instabreak().sound(SoundType.WET_GRASS)
     ));
-    public static final DeferredHolder<Block, Block> BULL_KELP = registerBlock("bull_kelp", () -> new AlgaePlant(
+    public static final DeferredHolder<Block, Block> BULL_KELP_PLANT = registerBlockNoItem("bull_kelp_plant", () -> new AlgaePlant(
         BlockBehaviour.Properties.of().mapColor(MapColor.WATER).noCollission().instabreak().sound(SoundType.WET_GRASS)
     ));
-    public static final DeferredHolder<Block, Block> SARGASSUM = registerBlock("sargassum", () -> new AlgaePlant(
+    public static final DeferredHolder<Block, Block> BULL_KELP = registerBlock("bull_kelp", () -> new AlgaeHead(
+        BlockBehaviour.Properties.of().mapColor(MapColor.WATER).noCollission().instabreak().sound(SoundType.WET_GRASS),
+        BULL_KELP_PLANT::get
+    ));
+    public static final DeferredHolder<Block, Block> SARGASSUM_PLANT = registerBlockNoItem("sargassum_plant", () -> new AlgaePlant(
         BlockBehaviour.Properties.of().mapColor(MapColor.WATER).noCollission().instabreak().sound(SoundType.WET_GRASS)
+    ));
+    public static final DeferredHolder<Block, Block> SARGASSUM = registerBlock("sargassum", () -> new AlgaeHead(
+        BlockBehaviour.Properties.of().mapColor(MapColor.WATER).noCollission().instabreak().sound(SoundType.WET_GRASS),
+        SARGASSUM_PLANT::get
     ));
 
     public static final DeferredHolder<Block, Block> BIG_DEAD_BUSH = registerBlock("big_dead_bush", () -> new VoxelBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().instabreak().sound(SoundType.GRASS)));
@@ -210,6 +219,11 @@ public class ModBlocks {
         // register BlockItem
         ModItems.registerBlockItem(name, toReturn);
         return toReturn;
+    }
+
+    // Helper to register a block without a corresponding item
+    private static <T extends Block> DeferredHolder<Block, T> registerBlockNoItem(String name, Supplier<T> blockSupplier) {
+        return BLOCKS.register(name, blockSupplier);
     }
 
     // Helper to register the watering pot block with its special item

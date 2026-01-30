@@ -1,7 +1,30 @@
 {
-  "multipart": [
-    {
-      "apply": { "model": "eidoplants:block/sargassum" }
-    }
-  ]
+  "variants": {
+    "age=0": { "model": "eidoplants:block/sargassum" },
+    "age=1": { "model": "eidoplants:block/sargassum" },
+    "age=2": { "model": "eidoplants:block/sargassum" },
+    "age=3": { "model": "eidoplants:block/sargassum" },
+    "age=4": { "model": "eidoplants:block/sargassum" },
+    "age=5": { "model": "eidoplants:block/sargassum" },
+    "age=6": { "model": "eidoplants:block/sargassum" },
+    "age=7": { "model": "eidoplants:block/sargassum" },
+    "age=8": { "model": "eidoplants:block/sargassum" },
+    "age=9": { "model": "eidoplants:block/sargassum" },
+    "age=10": { "model": "eidoplants:block/sargassum" },
+    "age=11": { "model": "eidoplants:block/sargassum" },
+    "age=12": { "model": "eidoplants:block/sargassum" },
+    "age=13": { "model": "eidoplants:block/sargassum" },
+    "age=14": { "model": "eidoplants:block/sargassum" },
+    "age=15": { "model": "eidoplants:block/sargassum" },
+    "age=16": { "model": "eidoplants:block/sargassum" },
+    "age=17": { "model": "eidoplants:block/sargassum" },
+    "age=18": { "model": "eidoplants:block/sargassum" },
+    "age=19": { "model": "eidoplants:block/sargassum" },
+    "age=20": { "model": "eidoplants:block/sargassum" },
+    "age=21": { "model": "eidoplants:block/sargassum" },
+    "age=22": { "model": "eidoplants:block/sargassum" },
+    "age=23": { "model": "eidoplants:block/sargassum" },
+    "age=24": { "model": "eidoplants:block/sargassum" },
+    "age=25": { "model": "eidoplants:block/sargassum" }
+  }
 }
