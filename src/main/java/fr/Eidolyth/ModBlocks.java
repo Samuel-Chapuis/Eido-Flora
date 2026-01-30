@@ -25,8 +25,8 @@ import fr.Eidolyth.block.plants.CustomSaplingBlock;
 import fr.Eidolyth.block.plants.MangroveCustomSapling;
 import fr.Eidolyth.block.plants.CutoutFlowerBlock;
 import fr.Eidolyth.block.plants.Algae;
-import fr.Eidolyth.block.plants.TallAlgae;
-import fr.Eidolyth.block.plants.GrowingAlgae;
+import fr.Eidolyth.block.plants.AlgaeTall;
+import fr.Eidolyth.block.plants.AlgaePlant;
 
 public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(BuiltInRegistries.BLOCK, EidoPlants.MODID);
@@ -49,13 +49,13 @@ public class ModBlocks {
     public static final DeferredHolder<Block, Block> BROWN_SEAWEED = registerBlock("brown_seaweed", () -> new Algae(
         BlockBehaviour.Properties.of().mapColor(MapColor.WATER).noCollission().instabreak().sound(SoundType.WET_GRASS)
     ));
-    public static final DeferredHolder<Block, Block> RED_ALGAE = registerBlock("red_algae", () -> new TallAlgae(
+    public static final DeferredHolder<Block, Block> RED_ALGAE = registerBlock("red_algae", () -> new AlgaeTall(
         BlockBehaviour.Properties.of().mapColor(MapColor.WATER).noCollission().instabreak().sound(SoundType.WET_GRASS)
     ));
-    public static final DeferredHolder<Block, Block> BULL_KELP = registerBlock("bull_kelp", () -> new GrowingAlgae(
+    public static final DeferredHolder<Block, Block> BULL_KELP = registerBlock("bull_kelp", () -> new AlgaePlant(
         BlockBehaviour.Properties.of().mapColor(MapColor.WATER).noCollission().instabreak().sound(SoundType.WET_GRASS)
     ));
-    public static final DeferredHolder<Block, Block> SARGASSUM = registerBlock("sargassum", () -> new GrowingAlgae(
+    public static final DeferredHolder<Block, Block> SARGASSUM = registerBlock("sargassum", () -> new AlgaePlant(
         BlockBehaviour.Properties.of().mapColor(MapColor.WATER).noCollission().instabreak().sound(SoundType.WET_GRASS)
     ));
 
