@@ -11,6 +11,15 @@ Eido-Flora is part of the Eido project, formerly known as the '4' project. Its g
 ### Français
 Eido-Flora fait partie du projet Eido, anciennement appelé projet '4'. Son objectif est de remplacer la végétation vanilla par des plantes personnalisées afin d’enrichir la flore de Minecraft. Il est compatible avec la plupart des mods de génération de terrain.
 
+## Acknowledgements
+### English
+I would like to thank the authors of the following mods:
+- [hybrid-aquatic](https://github.com/hybridlabs/hybrid-aquatic/tree/1.21.1-multiloader), from which I reused some algae textures
+
+### Français
+Je remercie les auteurs des mods suivants :
+- [hybrid-aquatic](https://github.com/hybridlabs/hybrid-aquatic/tree/1.21.1-multiloader), dont j’ai repris certaines textures d’algues
+
 ## Advertisement
 ### English
 As mentioned above, Eido-Flora is part of the Eido project mod collection. If you are interested in following the development of the Eido meta-project, feel free to join our server.
