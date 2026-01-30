@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "eidoplants:block/bull_kelp",
+    "particle": "eidoplants:block/bull_kelp"
+  },
+  "render_type": "cutout"
+}

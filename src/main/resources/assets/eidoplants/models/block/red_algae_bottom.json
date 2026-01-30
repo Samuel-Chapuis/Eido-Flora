@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "eidoplants:block/tall_red_algae_bottom",
+    "particle": "eidoplants:block/tall_red_algae_bottom"
+  },
+  "render_type": "cutout"
+}

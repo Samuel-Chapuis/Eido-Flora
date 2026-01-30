@@ -28,6 +28,10 @@ public class ModCreativeModTabs {
                 pOutput.accept(ModBlocks.BIG_LILY_PAD_BLUE.get());
                 pOutput.accept(ModBlocks.ALGAE0.get());
                 pOutput.accept(ModBlocks.ALGAE1.get());
+                pOutput.accept(ModBlocks.BROWN_SEAWEED.get());
+                pOutput.accept(ModBlocks.RED_ALGAE.get());
+                pOutput.accept(ModBlocks.BULL_KELP.get());
+                pOutput.accept(ModBlocks.SARGASSUM.get());
                 pOutput.accept(ModBlocks.BIG_DEAD_BUSH.get());
                 pOutput.accept(ModBlocks.BIG_DEAD_TREE.get());
                 pOutput.accept(ModBlocks.CATTAILS1.get());

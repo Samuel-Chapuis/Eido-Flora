@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "eidoplants:block/sargassum",
+    "particle": "eidoplants:block/sargassum"
+  },
+  "render_type": "cutout"
+}

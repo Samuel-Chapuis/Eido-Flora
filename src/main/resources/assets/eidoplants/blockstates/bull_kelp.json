@@ -1,0 +1,7 @@
+{
+  "multipart": [
+    {
+      "apply": { "model": "eidoplants:block/bull_kelp" }
+    }
+  ]
+}

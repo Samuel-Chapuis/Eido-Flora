@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "half=lower": { "model": "eidoplants:block/red_algae_bottom" },
+    "half=upper": { "model": "eidoplants:block/red_algae_top" }
+  }
+}

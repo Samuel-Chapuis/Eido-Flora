@@ -24,6 +24,9 @@ import fr.Eidolyth.block.plants.BiomColoredBlock;
 import fr.Eidolyth.block.plants.CustomSaplingBlock;
 import fr.Eidolyth.block.plants.MangroveCustomSapling;
 import fr.Eidolyth.block.plants.CutoutFlowerBlock;
+import fr.Eidolyth.block.plants.Algae;
+import fr.Eidolyth.block.plants.TallAlgae;
+import fr.Eidolyth.block.plants.GrowingAlgae;
 
 public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(BuiltInRegistries.BLOCK, EidoPlants.MODID);
@@ -42,6 +45,19 @@ public class ModBlocks {
 
     public static final DeferredHolder<Block, Block> ALGAE0 = registerBiomColoredWaterBlock("algae0", () -> new FloatingAlgaeBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WATER).instabreak().sound(SoundType.LILY_PAD)));
     public static final DeferredHolder<Block, Block> ALGAE1 = registerBiomColoredWaterBlock("algae1", () -> new FloatingAlgaeBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WATER).instabreak().sound(SoundType.LILY_PAD)));
+
+    public static final DeferredHolder<Block, Block> BROWN_SEAWEED = registerBlock("brown_seaweed", () -> new Algae(
+        BlockBehaviour.Properties.of().mapColor(MapColor.WATER).noCollission().instabreak().sound(SoundType.WET_GRASS)
+    ));
+    public static final DeferredHolder<Block, Block> RED_ALGAE = registerBlock("red_algae", () -> new TallAlgae(
+        BlockBehaviour.Properties.of().mapColor(MapColor.WATER).noCollission().instabreak().sound(SoundType.WET_GRASS)
+    ));
+    public static final DeferredHolder<Block, Block> BULL_KELP = registerBlock("bull_kelp", () -> new GrowingAlgae(
+        BlockBehaviour.Properties.of().mapColor(MapColor.WATER).noCollission().instabreak().sound(SoundType.WET_GRASS)
+    ));
+    public static final DeferredHolder<Block, Block> SARGASSUM = registerBlock("sargassum", () -> new GrowingAlgae(
+        BlockBehaviour.Properties.of().mapColor(MapColor.WATER).noCollission().instabreak().sound(SoundType.WET_GRASS)
+    ));
 
     public static final DeferredHolder<Block, Block> BIG_DEAD_BUSH = registerBlock("big_dead_bush", () -> new VoxelBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().instabreak().sound(SoundType.GRASS)));
     public static final DeferredHolder<Block, Block> BIG_DEAD_TREE = registerBlock("big_dead_tree", () -> new VoxelBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().instabreak().sound(SoundType.GRASS)));

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "eidoplants:block/brown_seaweed",
+    "particle": "eidoplants:block/brown_seaweed"
+  },
+  "render_type": "cutout"
+}
