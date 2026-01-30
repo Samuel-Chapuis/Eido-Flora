@@ -8,9 +8,9 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-public class AlgaeBlock extends WaterPlant {
+public class FloatingAlgaeBlock extends FloatingWaterPlant {
 
-    public AlgaeBlock(BlockBehaviour.Properties properties) {
+    public FloatingAlgaeBlock(BlockBehaviour.Properties properties) {
         super(properties);
     }
 

@@ -15,8 +15,8 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 import java.util.List;
 import java.util.function.Supplier;
 import fr.Eidolyth.block.VoxelBlock;
-import fr.Eidolyth.block.plants.WaterPlant;
-import fr.Eidolyth.block.plants.AlgaeBlock;
+import fr.Eidolyth.block.plants.FloatingWaterPlant;
+import fr.Eidolyth.block.plants.FloatingAlgaeBlock;
 import fr.Eidolyth.block.plants.CattailBlock;
 import fr.Eidolyth.block.plants.LeafLitterBlock;
 import fr.Eidolyth.block.plants.OrangeLeafLitterBlock;
@@ -34,14 +34,14 @@ public class ModBlocks {
     public static final DeferredHolder<Block, Block> GRAPE_VINE = registerBiomColoredBlock("grapevine", () -> new BiomColoredBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noOcclusion().strength(0.2F).sound(SoundType.GRASS)));
     public static final DeferredHolder<Block, Block> GRAPY_GRAPE_VINE = registerBiomColoredBlock("grapygrapevine", () -> new BiomColoredBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noOcclusion().strength(0.2F).sound(SoundType.GRASS)));
 
-    public static final DeferredHolder<Block, Block> BIG_LILY_PAD = registerBiomColoredWaterBlock("biglilypad", () -> new WaterPlant(BlockBehaviour.Properties.of().mapColor(MapColor.WATER).instabreak().sound(SoundType.LILY_PAD)));
-    public static final DeferredHolder<Block, Block> BIG_LILY_PAD_PINK = registerBiomColoredWaterBlock("biglilypad_pink", () -> new WaterPlant(BlockBehaviour.Properties.of().mapColor(MapColor.WATER).instabreak().sound(SoundType.LILY_PAD)));
-    public static final DeferredHolder<Block, Block> BIG_LILY_PAD_WHITE = registerBiomColoredWaterBlock("biglilypad_white", () -> new WaterPlant(BlockBehaviour.Properties.of().mapColor(MapColor.WATER).instabreak().sound(SoundType.LILY_PAD)));
-    public static final DeferredHolder<Block, Block> BIG_LILY_PAD_RED = registerBiomColoredWaterBlock("biglilypad_red", () -> new WaterPlant(BlockBehaviour.Properties.of().mapColor(MapColor.WATER).instabreak().sound(SoundType.LILY_PAD)));
-    public static final DeferredHolder<Block, Block> BIG_LILY_PAD_BLUE = registerBiomColoredWaterBlock("biglilypad_blue", () -> new WaterPlant(BlockBehaviour.Properties.of().mapColor(MapColor.WATER).instabreak().sound(SoundType.LILY_PAD)));
+    public static final DeferredHolder<Block, Block> BIG_LILY_PAD = registerBiomColoredWaterBlock("biglilypad", () -> new FloatingWaterPlant(BlockBehaviour.Properties.of().mapColor(MapColor.WATER).instabreak().sound(SoundType.LILY_PAD)));
+    public static final DeferredHolder<Block, Block> BIG_LILY_PAD_PINK = registerBiomColoredWaterBlock("biglilypad_pink", () -> new FloatingWaterPlant(BlockBehaviour.Properties.of().mapColor(MapColor.WATER).instabreak().sound(SoundType.LILY_PAD)));
+    public static final DeferredHolder<Block, Block> BIG_LILY_PAD_WHITE = registerBiomColoredWaterBlock("biglilypad_white", () -> new FloatingWaterPlant(BlockBehaviour.Properties.of().mapColor(MapColor.WATER).instabreak().sound(SoundType.LILY_PAD)));
+    public static final DeferredHolder<Block, Block> BIG_LILY_PAD_RED = registerBiomColoredWaterBlock("biglilypad_red", () -> new FloatingWaterPlant(BlockBehaviour.Properties.of().mapColor(MapColor.WATER).instabreak().sound(SoundType.LILY_PAD)));
+    public static final DeferredHolder<Block, Block> BIG_LILY_PAD_BLUE = registerBiomColoredWaterBlock("biglilypad_blue", () -> new FloatingWaterPlant(BlockBehaviour.Properties.of().mapColor(MapColor.WATER).instabreak().sound(SoundType.LILY_PAD)));
 
-    public static final DeferredHolder<Block, Block> ALGAE0 = registerBiomColoredWaterBlock("algae0", () -> new AlgaeBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WATER).instabreak().sound(SoundType.LILY_PAD)));
-    public static final DeferredHolder<Block, Block> ALGAE1 = registerBiomColoredWaterBlock("algae1", () -> new AlgaeBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WATER).instabreak().sound(SoundType.LILY_PAD)));
+    public static final DeferredHolder<Block, Block> ALGAE0 = registerBiomColoredWaterBlock("algae0", () -> new FloatingAlgaeBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WATER).instabreak().sound(SoundType.LILY_PAD)));
+    public static final DeferredHolder<Block, Block> ALGAE1 = registerBiomColoredWaterBlock("algae1", () -> new FloatingAlgaeBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WATER).instabreak().sound(SoundType.LILY_PAD)));
 
     public static final DeferredHolder<Block, Block> BIG_DEAD_BUSH = registerBlock("big_dead_bush", () -> new VoxelBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().instabreak().sound(SoundType.GRASS)));
     public static final DeferredHolder<Block, Block> BIG_DEAD_TREE = registerBlock("big_dead_tree", () -> new VoxelBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().instabreak().sound(SoundType.GRASS)));

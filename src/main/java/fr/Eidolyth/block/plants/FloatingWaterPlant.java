@@ -20,10 +20,10 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 
 import javax.annotation.Nullable;
 
-public class WaterPlant extends WaterlilyBlock implements net.minecraft.client.color.block.BlockColor {
+public class FloatingWaterPlant extends WaterlilyBlock implements net.minecraft.client.color.block.BlockColor {
     public static VoxelShape SHAPE = Block.box(0, 0, 0, 16, 1.5, 16);
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
-    public WaterPlant(Properties properties) {
+    public FloatingWaterPlant(Properties properties) {
         super(properties
                 .strength(0.0F)  // Same as vanilla lily pad
                 .noOcclusion()

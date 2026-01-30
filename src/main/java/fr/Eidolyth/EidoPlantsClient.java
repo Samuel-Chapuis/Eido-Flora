@@ -3,7 +3,7 @@ package fr.Eidolyth;
 import fr.Eidolyth.block.plants.LeafLitterBlock;
 import fr.Eidolyth.block.plants.OrangeLeafLitterBlock;
 import fr.Eidolyth.block.plants.CutoutFlowerBlock;
-import fr.Eidolyth.block.plants.WaterPlant;
+import fr.Eidolyth.block.plants.FloatingWaterPlant;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.BiomeColors;
 import net.minecraft.world.level.GrassColor;
@@ -83,8 +83,8 @@ public class EidoPlantsClient {
         // Register color handlers for WaterPlant instances (lily pads, algae)
         event.register((state, level, pos, tintIndex) -> {
             Block block = state.getBlock();
-            if (block instanceof WaterPlant waterPlant) {
-                return waterPlant.getColor(state, level, pos, tintIndex);
+            if (block instanceof FloatingWaterPlant floatingWaterPlant) {
+                return floatingWaterPlant.getColor(state, level, pos, tintIndex);
             }
             return GrassColor.getDefaultColor();
         }, 
