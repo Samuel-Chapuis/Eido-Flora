@@ -17,4 +17,8 @@ public class AlgaeHead extends KelpBlock {
     protected Block getBodyBlock() {
         return bodyBlock.get();
     }
+
+    public Block getBodyBlockPublic() {
+        return getBodyBlock();
+    }
 }
