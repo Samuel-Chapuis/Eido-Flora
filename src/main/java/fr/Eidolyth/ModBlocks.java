@@ -54,14 +54,16 @@ public class ModBlocks {
         BlockBehaviour.Properties.of().mapColor(MapColor.WATER).noCollission().instabreak().sound(SoundType.WET_GRASS)
     ));
     public static final DeferredHolder<Block, Block> BULL_KELP_PLANT = registerBlockNoItem("bull_kelp_plant", () -> new AlgaePlant(
-        BlockBehaviour.Properties.of().mapColor(MapColor.WATER).noCollission().instabreak().sound(SoundType.WET_GRASS)
+        BlockBehaviour.Properties.of().mapColor(MapColor.WATER).noCollission().instabreak().sound(SoundType.WET_GRASS),
+        ResourceLocation.fromNamespaceAndPath(EidoPlants.MODID, "bull_kelp")
     ));
     public static final DeferredHolder<Block, Block> BULL_KELP = registerBlock("bull_kelp", () -> new AlgaeHead(
         BlockBehaviour.Properties.of().mapColor(MapColor.WATER).noCollission().instabreak().sound(SoundType.WET_GRASS),
         BULL_KELP_PLANT::get
     ));
     public static final DeferredHolder<Block, Block> SARGASSUM_PLANT = registerBlockNoItem("sargassum_plant", () -> new AlgaePlant(
-        BlockBehaviour.Properties.of().mapColor(MapColor.WATER).noCollission().instabreak().sound(SoundType.WET_GRASS)
+        BlockBehaviour.Properties.of().mapColor(MapColor.WATER).noCollission().instabreak().sound(SoundType.WET_GRASS),
+        ResourceLocation.fromNamespaceAndPath(EidoPlants.MODID, "sargassum")
     ));
     public static final DeferredHolder<Block, Block> SARGASSUM = registerBlock("sargassum", () -> new AlgaeHead(
         BlockBehaviour.Properties.of().mapColor(MapColor.WATER).noCollission().instabreak().sound(SoundType.WET_GRASS),
