@@ -1,13 +1,7 @@
 package fr.Eidolyth;
 
-import fr.Eidolyth.block.plants.LeafLitterBlock;
-import fr.Eidolyth.block.plants.OrangeLeafLitterBlock;
-import fr.Eidolyth.block.plants.CutoutFlowerBlock;
-import fr.Eidolyth.block.plants.FloatingWaterPlant;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.BiomeColors;
-import net.minecraft.world.level.GrassColor;
-import net.minecraft.world.level.block.Block;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModContainer;
@@ -39,55 +33,18 @@ public class EidoPlantsClient {
 
     @SubscribeEvent
     static void registerBlockColorHandlers(RegisterColorHandlersEvent.Block event) {
-        // Register color handlers for BiomColoredBlock instances
+        // Register foliage-based block colors
         event.register((state, level, pos, tintIndex) -> {
             if (level != null && pos != null) {
                 return BiomeColors.getAverageFoliageColor(level, pos);
             }
-            return GrassColor.getDefaultColor();
+            return 0x48B518;
         }, 
         ModBlocks.GRAPE_VINE.get(),
-        ModBlocks.GRAPY_GRAPE_VINE.get()
-        );
-        
-        // Register color handler for normal LEAF_LITTER - use block's own color method
-        event.register((state, level, pos, tintIndex) -> {
-            Block block = state.getBlock();
-            if (block instanceof OrangeLeafLitterBlock orangeLeafLitterBlock) {
-                return orangeLeafLitterBlock.getColor(state, level, pos, tintIndex);
-            }
-            return GrassColor.getDefaultColor();
-        }, ModBlocks.LEAF_LITTER.get());
-        
-        // Register color handler for SPRING_LEAF_LITTER - use block's own color method
-        event.register((state, level, pos, tintIndex) -> {
-            Block block = state.getBlock();
-            if (block instanceof LeafLitterBlock leafLitterBlock) {
-                return leafLitterBlock.getColor(state, level, pos, tintIndex);
-            }
-            return GrassColor.getDefaultColor();
-        }, ModBlocks.SPRING_LEAF_LITTER.get());
-        
-        // Register color handlers for CutoutFlowerBlock instances (wildflower, bluet)
-        event.register((state, level, pos, tintIndex) -> {
-            Block block = state.getBlock();
-            if (block instanceof CutoutFlowerBlock cutoutFlowerBlock) {
-                return cutoutFlowerBlock.getColor(state, level, pos, tintIndex);
-            }
-            return GrassColor.getDefaultColor();
-        }, 
+        ModBlocks.GRAPY_GRAPE_VINE.get(),
+        ModBlocks.SPRING_LEAF_LITTER.get(),
         ModBlocks.WILD_FLOWER.get(),
-        ModBlocks.BLUET.get()
-        );
-        
-        // Register color handlers for WaterPlant instances (lily pads, algae)
-        event.register((state, level, pos, tintIndex) -> {
-            Block block = state.getBlock();
-            if (block instanceof FloatingWaterPlant floatingWaterPlant) {
-                return floatingWaterPlant.getColor(state, level, pos, tintIndex);
-            }
-            return GrassColor.getDefaultColor();
-        }, 
+        ModBlocks.BLUET.get(),
         ModBlocks.BIG_LILY_PAD.get(),
         ModBlocks.BIG_LILY_PAD_PINK.get(),
         ModBlocks.BIG_LILY_PAD_WHITE.get(),
@@ -96,6 +53,15 @@ public class EidoPlantsClient {
         ModBlocks.ALGAE0.get(),
         ModBlocks.ALGAE1.get()
         );
+        
+        // Register color handler for orange leaf litter with warm tint blend
+        event.register((state, level, pos, tintIndex) -> {
+            if (level != null && pos != null) {
+                int foliageColor = BiomeColors.getAverageFoliageColor(level, pos);
+                return blendColors(foliageColor, 0xD2691E, 0.7f);
+            }
+            return 0xD2691E;
+        }, ModBlocks.LEAF_LITTER.get());
     }
 
     @SubscribeEvent
@@ -138,5 +104,21 @@ public class EidoPlantsClient {
         }, 
         ModItems.LEAF_LITTER_ITEM.get()
         );
+    }
+
+    private static int blendColors(int color1, int color2, float ratio) {
+        int r1 = (color1 >> 16) & 0xFF;
+        int g1 = (color1 >> 8) & 0xFF;
+        int b1 = color1 & 0xFF;
+
+        int r2 = (color2 >> 16) & 0xFF;
+        int g2 = (color2 >> 8) & 0xFF;
+        int b2 = color2 & 0xFF;
+
+        int r = (int) (r1 * (1 - ratio) + r2 * ratio);
+        int g = (int) (g1 * (1 - ratio) + g2 * ratio);
+        int b = (int) (b1 * (1 - ratio) + b2 * ratio);
+
+        return (r << 16) | (g << 8) | b;
     }
 }

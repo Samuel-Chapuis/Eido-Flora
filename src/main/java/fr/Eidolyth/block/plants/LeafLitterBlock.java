@@ -1,10 +1,8 @@
 package fr.Eidolyth.block.plants;
 
-import net.minecraft.client.renderer.BiomeColors;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.context.BlockPlaceContext;
-import net.minecraft.world.level.BlockAndTintGetter;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.PinkPetalsBlock;
@@ -13,9 +11,8 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import javax.annotation.Nullable;
 
-public class LeafLitterBlock extends PinkPetalsBlock implements net.minecraft.client.color.block.BlockColor {
+public class LeafLitterBlock extends PinkPetalsBlock {
 
     // Fixed collision box for all leaf litter amounts - full block width, thin height
     private static final VoxelShape FIXED_SHAPE = Block.box(0.0D, 0.0D, 0.0D, 16.0D, 1.0D, 16.0D);
@@ -37,15 +34,6 @@ public class LeafLitterBlock extends PinkPetalsBlock implements net.minecraft.cl
             // Parent doesn't define canBeReplaced in these mappings; default to false
             return false;
         }
-    }
-
-    @Override
-    public int getColor(BlockState state, @Nullable BlockAndTintGetter world, @Nullable BlockPos pos, int tintIndex) {
-        if (world != null && pos != null) {
-            return BiomeColors.getAverageFoliageColor(world, pos);
-        }
-        // Green fallback color for inventory
-        return 0x48B518;
     }
 
     @Override

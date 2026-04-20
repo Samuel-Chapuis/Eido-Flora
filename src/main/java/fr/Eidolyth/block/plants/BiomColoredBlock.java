@@ -1,10 +1,8 @@
 package fr.Eidolyth.block.plants;
 
-import net.minecraft.client.renderer.BiomeColors;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.context.BlockPlaceContext;
-import net.minecraft.world.level.BlockAndTintGetter;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.RenderShape;
@@ -15,7 +13,7 @@ import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-public class BiomColoredBlock extends Block implements net.minecraft.client.color.block.BlockColor {
+public class BiomColoredBlock extends Block {
 
     public static final VoxelShape SHAPE = Block.box(0, 0, 0, 16, 16, 16);
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
@@ -48,13 +46,5 @@ public class BiomColoredBlock extends Block implements net.minecraft.client.colo
     @Override
     public VoxelShape getShape(BlockState state, BlockGetter plevel, BlockPos pos, CollisionContext context) {
         return SHAPE;
-    }
-
-    @Override
-    public int getColor(BlockState state, BlockAndTintGetter level, BlockPos pos, int tintIndex) {
-        if (pos != null && level != null) {
-            return BiomeColors.getAverageFoliageColor(level, pos);
-        }
-        return 0x48B518;
     }
 }

@@ -6,17 +6,17 @@
       "request": "launch",
       "name": "Client",
       "presentation": {
-        "group": "Mod Development - EidoPlants",
+        "group": "Mod Development - Eido-Flora",
         "order": 0
       },
-      "projectName": "EidoPlants",
+      "projectName": "Eido-Flora",
       "mainClass": "net.neoforged.devlaunch.Main",
       "args": [
-        "@C:\\Dev\\MC\\EidoPlants\\build\\moddev\\clientRunProgramArgs.txt"
+        "@C:\\Dev\\MC\\Eido-Flora\\build\\moddev\\clientRunProgramArgs.txt"
       ],
       "vmArgs": [
-        "@C:\\Dev\\MC\\EidoPlants\\build\\moddev\\clientRunVmArgs.txt",
-        "-Dfml.modFolders\u003deidoplants%%C:\\Dev\\MC\\EidoPlants\\bin\\main"
+        "@C:\\Dev\\MC\\Eido-Flora\\build\\moddev\\clientRunVmArgs.txt",
+        "-Dfml.modFolders\u003deidoplants%%C:\\Dev\\MC\\Eido-Flora\\bin\\main"
       ],
       "cwd": "${workspaceFolder}\\run",
       "env": {},
@@ -28,17 +28,17 @@
       "request": "launch",
       "name": "Data",
       "presentation": {
-        "group": "Mod Development - EidoPlants",
+        "group": "Mod Development - Eido-Flora",
         "order": 1
       },
-      "projectName": "EidoPlants",
+      "projectName": "Eido-Flora",
       "mainClass": "net.neoforged.devlaunch.Main",
       "args": [
-        "@C:\\Dev\\MC\\EidoPlants\\build\\moddev\\dataRunProgramArgs.txt"
+        "@C:\\Dev\\MC\\Eido-Flora\\build\\moddev\\dataRunProgramArgs.txt"
       ],
       "vmArgs": [
-        "@C:\\Dev\\MC\\EidoPlants\\build\\moddev\\dataRunVmArgs.txt",
-        "-Dfml.modFolders\u003deidoplants%%C:\\Dev\\MC\\EidoPlants\\bin\\main"
+        "@C:\\Dev\\MC\\Eido-Flora\\build\\moddev\\dataRunVmArgs.txt",
+        "-Dfml.modFolders\u003deidoplants%%C:\\Dev\\MC\\Eido-Flora\\bin\\main"
       ],
       "cwd": "${workspaceFolder}\\run",
       "env": {},
@@ -50,17 +50,17 @@
       "request": "launch",
       "name": "GameTestServer",
       "presentation": {
-        "group": "Mod Development - EidoPlants",
+        "group": "Mod Development - Eido-Flora",
         "order": 2
       },
-      "projectName": "EidoPlants",
+      "projectName": "Eido-Flora",
       "mainClass": "net.neoforged.devlaunch.Main",
       "args": [
-        "@C:\\Dev\\MC\\EidoPlants\\build\\moddev\\gameTestServerRunProgramArgs.txt"
+        "@C:\\Dev\\MC\\Eido-Flora\\build\\moddev\\gameTestServerRunProgramArgs.txt"
       ],
       "vmArgs": [
-        "@C:\\Dev\\MC\\EidoPlants\\build\\moddev\\gameTestServerRunVmArgs.txt",
-        "-Dfml.modFolders\u003deidoplants%%C:\\Dev\\MC\\EidoPlants\\bin\\main"
+        "@C:\\Dev\\MC\\Eido-Flora\\build\\moddev\\gameTestServerRunVmArgs.txt",
+        "-Dfml.modFolders\u003deidoplants%%C:\\Dev\\MC\\Eido-Flora\\bin\\main"
       ],
       "cwd": "${workspaceFolder}\\run",
       "env": {},
@@ -72,17 +72,17 @@
       "request": "launch",
       "name": "Server",
       "presentation": {
-        "group": "Mod Development - EidoPlants",
+        "group": "Mod Development - Eido-Flora",
         "order": 3
       },
-      "projectName": "EidoPlants",
+      "projectName": "Eido-Flora",
       "mainClass": "net.neoforged.devlaunch.Main",
       "args": [
-        "@C:\\Dev\\MC\\EidoPlants\\build\\moddev\\serverRunProgramArgs.txt"
+        "@C:\\Dev\\MC\\Eido-Flora\\build\\moddev\\serverRunProgramArgs.txt"
       ],
       "vmArgs": [
-        "@C:\\Dev\\MC\\EidoPlants\\build\\moddev\\serverRunVmArgs.txt",
-        "-Dfml.modFolders\u003deidoplants%%C:\\Dev\\MC\\EidoPlants\\bin\\main"
+        "@C:\\Dev\\MC\\Eido-Flora\\build\\moddev\\serverRunVmArgs.txt",
+        "-Dfml.modFolders\u003deidoplants%%C:\\Dev\\MC\\Eido-Flora\\bin\\main"
       ],
       "cwd": "${workspaceFolder}\\run",
       "env": {},

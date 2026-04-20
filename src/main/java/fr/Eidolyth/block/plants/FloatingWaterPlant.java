@@ -1,10 +1,8 @@
 package fr.Eidolyth.block.plants;
 
-import net.minecraft.client.renderer.BiomeColors;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.context.BlockPlaceContext;
-import net.minecraft.world.level.BlockAndTintGetter;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.LevelReader;
@@ -18,9 +16,7 @@ import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-import javax.annotation.Nullable;
-
-public class FloatingWaterPlant extends WaterlilyBlock implements net.minecraft.client.color.block.BlockColor {
+public class FloatingWaterPlant extends WaterlilyBlock {
     public static VoxelShape SHAPE = Block.box(0, 0, 0, 16, 1.5, 16);
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
     public FloatingWaterPlant(Properties properties) {
@@ -84,14 +80,5 @@ public class FloatingWaterPlant extends WaterlilyBlock implements net.minecraft.
     @Override
     public BlockState updateShape(BlockState state, Direction direction, BlockState facingState, LevelAccessor level, BlockPos currentPos, BlockPos facingPos) {
         return !state.canSurvive(level, currentPos) ? Blocks.AIR.defaultBlockState() : super.updateShape(state, direction, facingState, level, currentPos, facingPos);
-    }
-
-    @Override
-    public int getColor(BlockState state, @Nullable BlockAndTintGetter world, @Nullable BlockPos pos, int tintIndex) {
-        if (world != null && pos != null) {
-            return BiomeColors.getAverageFoliageColor(world, pos);
-        }
-        // Fallback color for out-of-world rendering (e.g., inventory)
-        return 0x48B518;
     }
 }
