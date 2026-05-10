@@ -70,8 +70,8 @@ public class CustomSaplingBlock extends BushBlock implements BonemealableBlock {
         // Select a random structure from the list
         ResourceLocation structureId = structureList.get(random.nextInt(structureList.size()));
         
-        System.out.println("=== MANUAL STRUCTURE LOADING ===");
-        System.out.println("Attempting to load structure: " + structureId);
+        // System.out.println("=== MANUAL STRUCTURE LOADING ===");
+        // System.out.println("Attempting to load structure: " + structureId);
         
         // Try to load the structure manually using the resource manager
         StructureTemplate template = new StructureTemplate();
@@ -81,22 +81,22 @@ public class CustomSaplingBlock extends BushBlock implements BonemealableBlock {
             // Get the resource as an input stream
             InputStream inputStream = CustomSaplingBlock.class.getResourceAsStream(resourcePath);
             
-            if (inputStream == null) {
-                System.err.println("Resource not found: " + resourcePath);
-                System.err.println("Trying alternative path...");
+                if (inputStream == null) {
+                // System.err.println("Resource not found: " + resourcePath);
+                // System.err.println("Trying alternative path...");
                 
                 // Try alternative path without leading slash
                 String altPath = "data/" + structureId.getNamespace() + "/structures/" + structureId.getPath() + ".nbt";
                 inputStream = CustomSaplingBlock.class.getClassLoader().getResourceAsStream(altPath);
                 
                 if (inputStream == null) {
-                    System.err.println("Alternative resource not found: " + altPath);
+                    // System.err.println("Alternative resource not found: " + altPath);
                     level.setBlock(pos, state, 3);
                     return;
                 }
-                System.out.println("Found with alternative path: " + altPath);
+                // System.out.println("Found with alternative path: " + altPath);
             } else {
-                System.out.println("Found resource: " + resourcePath);
+                // System.out.println("Found resource: " + resourcePath);
             }
             
             // Read the NBT data
@@ -106,15 +106,15 @@ public class CustomSaplingBlock extends BushBlock implements BonemealableBlock {
             // Load the template from NBT
             template.load(level.registryAccess().lookupOrThrow(net.minecraft.core.registries.Registries.BLOCK), nbtData);
             
-            System.out.println("Structure loaded successfully from NBT!");
+            // System.out.println("Structure loaded successfully from NBT!");
             
         } catch (IOException e) {
-            System.err.println("Failed to load structure NBT: " + e.getMessage());
+            // System.err.println("Failed to load structure NBT: " + e.getMessage());
             e.printStackTrace();
             level.setBlock(pos, state, 3);
             return;
         } catch (Exception e) {
-            System.err.println("Unexpected error loading structure: " + e.getMessage());
+            // System.err.println("Unexpected error loading structure: " + e.getMessage());
             e.printStackTrace();
             level.setBlock(pos, state, 3);
             return;
@@ -122,10 +122,10 @@ public class CustomSaplingBlock extends BushBlock implements BonemealableBlock {
         
         // Get structure size for proper centering
         Vec3i size = template.getSize();
-        System.out.println("Structure size: " + size.getX() + "x" + size.getY() + "x" + size.getZ());
+        // System.out.println("Structure size: " + size.getX() + "x" + size.getY() + "x" + size.getZ());
         
         if (size.equals(Vec3i.ZERO)) {
-            System.err.println("Structure has zero size, something went wrong");
+            // System.err.println("Structure has zero size, something went wrong");
             level.setBlock(pos, state, 3);
             return;
         }
@@ -145,20 +145,20 @@ public class CustomSaplingBlock extends BushBlock implements BonemealableBlock {
                 .setIgnoreEntities(false)
                 .setFinalizeEntities(true);
         
-        System.out.println("Placing structure at origin: " + origin + " (sapling was at: " + pos + ")");
+        // System.out.println("Placing structure at origin: " + origin + " (sapling was at: " + pos + ")");
         
         // Place the structure
         try {
             boolean success = template.placeInWorld(level, origin, origin, settings, random, 2);
-            System.out.println("Structure placement result: " + success);
-            System.out.println("=== END MANUAL STRUCTURE LOADING ===");
+            // System.out.println("Structure placement result: " + success);
+            // System.out.println("=== END MANUAL STRUCTURE LOADING ===");
             
             if (!success) {
-                System.err.println("Failed to place structure, placing sapling back");
+                // System.err.println("Failed to place structure, placing sapling back");
                 level.setBlock(pos, state, 3);
             }
         } catch (Exception e) {
-            System.err.println("Exception while placing structure: " + e.getMessage());
+            // System.err.println("Exception while placing structure: " + e.getMessage());
             e.printStackTrace();
             level.setBlock(pos, state, 3);
         }

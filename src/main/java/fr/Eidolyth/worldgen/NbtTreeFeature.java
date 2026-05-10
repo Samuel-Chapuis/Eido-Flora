@@ -47,25 +47,25 @@ public class NbtTreeFeature extends Feature<NbtTreeFeatureConfig> {
             srv = wgl;                // WorldGenLevel implémente ServerLevelAccessor
             server = wgl.getLevel();  // ServerLevel
         } else {
-            System.out.println("[EidoPlants] place(): not server-like, skip. pos=" + pos);
+            // System.out.println("[EidoPlants] place(): not server-like, skip. pos=" + pos);
             return false;
         }
 
         // 2) Choisir un template
         var list = cfg.templates();
         if (list == null || list.isEmpty()) {
-            System.out.println("[EidoPlants] No templates in config");
+            // System.out.println("[EidoPlants] No templates in config");
             return false;
         }
         var chosen = list.get(random.nextInt(list.size()));
-        System.out.println("[EidoPlants] place at " + pos + " chosen=" + chosen);
+        // System.out.println("[EidoPlants] place at " + pos + " chosen=" + chosen);
 
         // 3) Essayer StructureManager d'abord
         net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate template = null;
         var opt = server.getStructureManager().get(chosen);
-        if (opt.isPresent()) {
+            if (opt.isPresent()) {
             template = opt.get();
-            System.out.println("[EidoPlants] Loaded via StructureManager size=" + template.getSize());
+            // System.out.println("[EidoPlants] Loaded via StructureManager size="+ template.getSize());
         } else {
             // 3bis) Fallback: lecture manuelle comme ton ancien code
             try {
@@ -80,14 +80,14 @@ public class NbtTreeFeature extends Feature<NbtTreeFeatureConfig> {
                         var nbt = net.minecraft.nbt.NbtIo.readCompressed(is, net.minecraft.nbt.NbtAccounter.unlimitedHeap());
                         template = new net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate();
                         template.load(server.registryAccess().lookupOrThrow(net.minecraft.core.registries.Registries.BLOCK), nbt);
-                        System.out.println("[EidoPlants] Loaded via ResourceManager size=" + template.getSize());
+                        // System.out.println("[EidoPlants] Loaded via ResourceManager size=" + template.getSize());
                     }
                 } else {
-                    System.out.println("[EidoPlants] Not found (SM+RM): " + fileLoc);
+                    // System.out.println("[EidoPlants] Not found (SM+RM): " + fileLoc);
                     return false;
                 }
             } catch (Exception ex) {
-                ex.printStackTrace();
+                // ex.printStackTrace();
                 return false;
             }
         }
@@ -118,13 +118,13 @@ public class NbtTreeFeature extends Feature<NbtTreeFeatureConfig> {
 
         // Vérifier si le bloc sous le centre est un bloc de terre approprié
         if (!acceptableBlocks.contains(blockBelowCenter.getBlock())) {
-            System.out.println("[EidoPlants] Center position not on acceptable ground block: " + blockBelowCenter.getBlock() + ", skipping placement at " + pos);
+            // System.out.println("[EidoPlants] Center position not on acceptable ground block: " + blockBelowCenter.getBlock() + ", skipping placement at " + pos);
             return false;
         }
 
         // 5) Calculer la position finale avec l'offset Y
         var finalPos = pos.offset(0, cfg.y_offset(), 0);
-        System.out.println("[EidoPlants] Original pos=" + pos + ", y_offset=" + cfg.y_offset() + ", final pos=" + finalPos);
+        // System.out.println("[EidoPlants] Original pos=" + pos + ", y_offset=" + cfg.y_offset() + ", final pos=" + finalPos);
 
         // 6) Centrer le placement de l'arbre
         // centre horizontal du template (au niveau Y=0)
@@ -140,7 +140,7 @@ public class NbtTreeFeature extends Feature<NbtTreeFeatureConfig> {
 
         // Placement centré sur ServerLevelAccessor
         boolean placed = template.placeInWorld(srv, origin, origin, settings, random, 2);
-        System.out.println("[EidoPlants] placeInWorld=" + placed + " at " + origin + " (centered from " + finalPos + ")");
+        // System.out.println("[EidoPlants] placeInWorld=" + placed + " at " + origin + " (centered from " + finalPos + ")");
         return placed;
     }
 }
