@@ -4,6 +4,7 @@ import fr.Eidolyth.EidoPlants;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -47,16 +48,23 @@ public final class FoliageCutterItemLogic {
                 return;
             }
 
+            BlockState originState = event.getState();
+            if (!originState.is(BlockTags.LEAVES)) {
+                // Expected behavior: if you hit wood (or anything else), do not AOE.
+                return;
+            }
+
             BlockPos origin = event.getPos();
             boolean verbose = player.isShiftKeyDown();
             if (verbose) {
-                EidoPlants.LOGGER.info("[FoliageCutter] Trigger @ {} state={}", origin, event.getState());
+                EidoPlants.LOGGER.info("[FoliageCutter] Trigger @ {} state={}", origin, originState);
             }
 
             int checked = 0;
             int destroyed = 0;
             int failed = 0;
             int skippedAir = 0;
+            int skippedNotLeaves = 0;
             int skippedOutOfBounds = 0;
 
             boolean drop = !player.getAbilities().instabuild;
@@ -85,6 +93,11 @@ public final class FoliageCutterItemLogic {
                                 continue;
                             }
 
+                            if (!targetState.is(BlockTags.LEAVES)) {
+                                skippedNotLeaves++;
+                                continue;
+                            }
+
                             boolean ok = level.destroyBlock(targetPos, drop, player);
                             if (ok) {
                                 destroyed++;
@@ -103,13 +116,13 @@ public final class FoliageCutterItemLogic {
 
             if (verbose) {
                 EidoPlants.LOGGER.info(
-                        "[FoliageCutter] AOE done @ {} | checked={} destroyed={} failed={} skipped(air={},oob={})",
-                        origin, checked, destroyed, failed, skippedAir, skippedOutOfBounds
+                        "[FoliageCutter] AOE done @ {} | checked={} destroyed={} failed={} skipped(air={},notLeaves={},oob={})",
+                        origin, checked, destroyed, failed, skippedAir, skippedNotLeaves, skippedOutOfBounds
                 );
             } else {
                 EidoPlants.LOGGER.debug(
-                        "[FoliageCutter] AOE done @ {} | checked={} destroyed={} failed={} skipped(air={},oob={})",
-                        origin, checked, destroyed, failed, skippedAir, skippedOutOfBounds
+                        "[FoliageCutter] AOE done @ {} | checked={} destroyed={} failed={} skipped(air={},notLeaves={},oob={})",
+                        origin, checked, destroyed, failed, skippedAir, skippedNotLeaves, skippedOutOfBounds
                 );
             }
         }
