@@ -10,11 +10,18 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import fr.Eidolyth.item.BiomColoredBlockItem;
 import fr.Eidolyth.item.BiomColoredPlaceOnWaterBlockItem;
+import fr.Eidolyth.item.FoliageCutterItem;
 import fr.Eidolyth.item.WateringPotItem;
 
 // Minimal items registration using NeoForge DeferredRegister
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(BuiltInRegistries.ITEM, EidoPlants.MODID);
+
+    // Standalone items
+    public static final DeferredHolder<Item, Item> FOLIAGE_CUTTER = ITEMS.register(
+            "foliage_cutter",
+            () -> new FoliageCutterItem(new Item.Properties().durability(512))
+    );
 
     // Water-placeable block items - these are automatically registered by ModBlocks.registerBlock()
     // but we keep references here for easy access
