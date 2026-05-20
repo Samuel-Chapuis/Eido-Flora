@@ -1,7 +1,7 @@
 {
 	"parent": "item/handheld",
 	"textures": {
-		"layer0": "eidoplants:item/foliage_cutter"
+		"layer0": "eidoplants:item/diamond_foliage_cutter"
 	},
 	"display": {
 		"thirdperson_righthand": {

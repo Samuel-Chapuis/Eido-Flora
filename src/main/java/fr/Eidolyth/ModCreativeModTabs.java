@@ -58,6 +58,7 @@ public class ModCreativeModTabs {
                 pOutput.accept(ModBlocks.CUSTOM_SPRUCE_SAPLING.get());
                 pOutput.accept(ModBlocks.WATERING_POT.get());
                 pOutput.accept(ModItems.FOLIAGE_CUTTER.get());
+                pOutput.accept(ModItems.DIAMOND_FOLIAGE_CUTTER.get());
             })
             .withTabsBefore(CreativeModeTabs.SPAWN_EGGS)
             .build());

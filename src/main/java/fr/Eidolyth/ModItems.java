@@ -1,15 +1,18 @@
 package fr.Eidolyth;
 
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.PlaceOnWaterBlockItem;
+import net.minecraft.world.item.Tiers;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import fr.Eidolyth.item.BiomColoredBlockItem;
 import fr.Eidolyth.item.BiomColoredPlaceOnWaterBlockItem;
+import fr.Eidolyth.item.DiamondFoliageCutterItem;
 import fr.Eidolyth.item.FoliageCutterItem;
 import fr.Eidolyth.item.WateringPotItem;
 
@@ -17,10 +20,25 @@ import fr.Eidolyth.item.WateringPotItem;
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(BuiltInRegistries.ITEM, EidoPlants.MODID);
 
-    // Standalone items
     public static final DeferredHolder<Item, Item> FOLIAGE_CUTTER = ITEMS.register(
             "foliage_cutter",
-            () -> new FoliageCutterItem(new Item.Properties().durability(512))
+            () -> new FoliageCutterItem(
+                    Tiers.IRON,
+                    new Item.Properties()
+                            .durability(512)
+                            .attributes(AxeItem.createAttributes(Tiers.IRON, 0.0F, -3.0F)),
+                    1
+            )
+    );
+
+    public static final DeferredHolder<Item, Item> DIAMOND_FOLIAGE_CUTTER = ITEMS.register(
+            "diamond_foliage_cutter",
+            () -> new DiamondFoliageCutterItem(
+                    Tiers.DIAMOND,
+                    new Item.Properties()
+                            .durability(1561)
+                            .attributes(AxeItem.createAttributes(Tiers.DIAMOND, 0.0F, -3.0F))
+            )
     );
 
     // Water-placeable block items - these are automatically registered by ModBlocks.registerBlock()

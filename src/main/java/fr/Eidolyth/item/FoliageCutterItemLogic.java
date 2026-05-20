@@ -44,7 +44,7 @@ public final class FoliageCutterItemLogic {
             }
 
             ItemStack tool = player.getMainHandItem();
-            if (!(tool.getItem() instanceof FoliageCutterItem)) {
+            if (!(tool.getItem() instanceof FoliageCutterItem cutter)) {
                 return;
             }
 
@@ -70,10 +70,11 @@ public final class FoliageCutterItemLogic {
             boolean drop = !player.getAbilities().instabuild;
 
             AOE_BREAKING.set(Boolean.TRUE);
+            int radius = cutter.getRadius();
             try {
-                for (int dx = -1; dx <= 1; dx++) {
-                    for (int dy = -1; dy <= 1; dy++) {
-                        for (int dz = -1; dz <= 1; dz++) {
+                for (int dx = -radius; dx <= radius; dx++) {
+                    for (int dy = -radius; dy <= radius; dy++) {
+                        for (int dz = -radius; dz <= radius; dz++) {
                             if (dx == 0 && dy == 0 && dz == 0) {
                                 continue;
                             }
