@@ -1,3 +1,6 @@
 {
-  "parent": "eidoplants:block/brown_seaweed"
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "eidoplants:block/brown_seaweed"
+  }
 }

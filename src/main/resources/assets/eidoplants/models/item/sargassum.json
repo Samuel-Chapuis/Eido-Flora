@@ -1,3 +1,6 @@
 {
-  "parent": "eidoplants:block/sargassum"
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "eidoplants:block/sargassum"
+  }
 }
