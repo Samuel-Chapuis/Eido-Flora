@@ -2,9 +2,12 @@ package fr.Eidolyth.item;
 
 import fr.Eidolyth.EidoPlants;
 import net.minecraft.core.BlockPos;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -18,6 +21,10 @@ public final class FoliageCutterItemLogic {
 
     private FoliageCutterItemLogic() {
     }
+
+    private static final TagKey<Block> FOLIAGE_BREAKABLE = BlockTags.create(
+        ResourceLocation.fromNamespaceAndPath("eidoplants", "foliage_breakable")
+    );
 
     public static void ensureRegistered() {
         if (REGISTERED) {
@@ -49,7 +56,7 @@ public final class FoliageCutterItemLogic {
             }
 
             BlockState originState = event.getState();
-            if (!originState.is(BlockTags.LEAVES)) {
+            if (!originState.is(FOLIAGE_BREAKABLE)) {
                 // Expected behavior: if you hit wood (or anything else), do not AOE.
                 return;
             }
@@ -94,7 +101,7 @@ public final class FoliageCutterItemLogic {
                                 continue;
                             }
 
-                            if (!targetState.is(BlockTags.LEAVES)) {
+                            if (!targetState.is(FOLIAGE_BREAKABLE)) {
                                 skippedNotLeaves++;
                                 continue;
                             }
