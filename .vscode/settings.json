@@ -5,6 +5,8 @@
     "java.compile.nullAnalysis.mode": "automatic",
     "conventionalCommits.scopes": [
         "cutter",
-        "cutter"
-    ]
+        "cutter",
+        "watering"
+    ],
+    "java.configuration.updateBuildConfiguration": "automatic"
 }

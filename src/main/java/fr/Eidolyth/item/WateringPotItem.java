@@ -46,12 +46,7 @@ public class WateringPotItem extends BlockItem {
                     
                     // Spawn particles (this will be handled client-side)
                     level.gameEvent(GameEvent.ITEM_INTERACT_FINISH, pos, GameEvent.Context.of(player, blockState));
-                    
-                    // Damage the watering pot (optional - makes it consumable)
-                    if (player != null && !player.getAbilities().instabuild) {
-                        itemStack.shrink(1);
-                    }
-                    
+
                     return InteractionResult.SUCCESS;
                 }
             } else {
