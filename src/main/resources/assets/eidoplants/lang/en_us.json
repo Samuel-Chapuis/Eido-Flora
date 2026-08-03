@@ -42,6 +42,9 @@
 
   "item.eidoplants.foliage_cutter": "Foliage Cutter",
   "item.eidoplants.diamond_foliage_cutter": "Diamond Foliage Cutter",
+  "item.eidoplants.foliage_cutter.description": "Recursively breaks connected foliage blocks.",
+  "item.eidoplants.foliage_cutter.warning": "Warning: can also break wood and building blocks!",
+  "item.eidoplants.foliage_cutter.range": "Maximum distance: %s blocks",
 
   "creativetab.plants_eidoplants": "EidoPlants"
 }

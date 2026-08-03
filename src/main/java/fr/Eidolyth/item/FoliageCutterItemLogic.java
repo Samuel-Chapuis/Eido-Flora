@@ -2,7 +2,6 @@ package fr.Eidolyth.item;
 
 import fr.Eidolyth.EidoPlants;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
@@ -23,7 +22,6 @@ public final class FoliageCutterItemLogic {
 
     private static volatile boolean REGISTERED = false;
     private static final ThreadLocal<Boolean> AOE_BREAKING = ThreadLocal.withInitial(() -> Boolean.FALSE);
-    private static final int MAX_DISTANCE = 10;
 
     private FoliageCutterItemLogic() {
     }
@@ -57,7 +55,7 @@ public final class FoliageCutterItemLogic {
             }
 
             ItemStack tool = player.getMainHandItem();
-            if (!(tool.getItem() instanceof FoliageCutterItem)) {
+            if (!(tool.getItem() instanceof FoliageCutterItem cutter)) {
                 return;
             }
 
@@ -106,35 +104,44 @@ public final class FoliageCutterItemLogic {
                         }
                     }
 
-                    if (current.distance() >= MAX_DISTANCE) {
+                    if (current.distance() >= cutter.getMaxDistance()) {
                         continue;
                     }
 
-                    for (Direction direction : Direction.values()) {
-                        BlockPos targetPos = current.pos().relative(direction);
-                        if (!visited.add(targetPos)) {
-                            continue;
-                        }
+                    // Check all 26 neighboring positions: faces, edges, and corners.
+                    for (int dx = -1; dx <= 1; dx++) {
+                        for (int dy = -1; dy <= 1; dy++) {
+                            for (int dz = -1; dz <= 1; dz++) {
+                                if (dx == 0 && dy == 0 && dz == 0) {
+                                    continue;
+                                }
 
-                        checked++;
-                        if (targetPos.getY() < level.getMinBuildHeight() || targetPos.getY() >= level.getMaxBuildHeight()
-                                || !level.getWorldBorder().isWithinBounds(targetPos)) {
-                            skippedOutOfBounds++;
-                            continue;
-                        }
+                                BlockPos targetPos = current.pos().offset(dx, dy, dz);
+                                if (!visited.add(targetPos)) {
+                                    continue;
+                                }
 
-                        BlockState targetState = level.getBlockState(targetPos);
-                        if (targetState.isAir()) {
-                            skippedAir++;
-                            continue;
-                        }
+                                checked++;
+                                if (targetPos.getY() < level.getMinBuildHeight() || targetPos.getY() >= level.getMaxBuildHeight()
+                                        || !level.getWorldBorder().isWithinBounds(targetPos)) {
+                                    skippedOutOfBounds++;
+                                    continue;
+                                }
 
-                        if (!targetState.is(FOLIAGE_BREAKABLE)) {
-                            skippedNotLeaves++;
-                            continue;
-                        }
+                                BlockState targetState = level.getBlockState(targetPos);
+                                if (targetState.isAir()) {
+                                    skippedAir++;
+                                    continue;
+                                }
 
-                        queue.addLast(new SearchNode(targetPos, current.distance() + 1));
+                                if (!targetState.is(FOLIAGE_BREAKABLE)) {
+                                    skippedNotLeaves++;
+                                    continue;
+                                }
+
+                                queue.addLast(new SearchNode(targetPos, current.distance() + 1));
+                            }
+                        }
                     }
                 }
             } finally {

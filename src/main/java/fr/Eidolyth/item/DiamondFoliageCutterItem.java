@@ -3,7 +3,7 @@ import net.minecraft.world.item.Tier;
 
 public class DiamondFoliageCutterItem extends FoliageCutterItem {
 
-    public DiamondFoliageCutterItem(Tier tier, Properties properties) {
-        super(tier, properties);
+    public DiamondFoliageCutterItem(Tier tier, Properties properties, int maxDistance) {
+        super(tier, properties, maxDistance);
     }
 }
