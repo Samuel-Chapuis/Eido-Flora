@@ -4,6 +4,6 @@ import net.minecraft.world.item.Tier;
 public class DiamondFoliageCutterItem extends FoliageCutterItem {
 
     public DiamondFoliageCutterItem(Tier tier, Properties properties) {
-        super(tier, properties, 2);
+        super(tier, properties);
     }
 }

@@ -26,8 +26,7 @@ public class ModItems {
                     Tiers.IRON,
                     new Item.Properties()
                             .durability(512)
-                            .attributes(AxeItem.createAttributes(Tiers.IRON, 0.0F, -3.0F)),
-                    1
+                            .attributes(AxeItem.createAttributes(Tiers.IRON, 0.0F, -3.0F))
             )
     );
 

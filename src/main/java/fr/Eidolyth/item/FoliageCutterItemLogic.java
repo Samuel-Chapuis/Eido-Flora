@@ -2,6 +2,7 @@ package fr.Eidolyth.item;
 
 import fr.Eidolyth.EidoPlants;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
@@ -14,10 +15,15 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.level.BlockEvent;
 
+import java.util.ArrayDeque;
+import java.util.HashSet;
+import java.util.Set;
+
 public final class FoliageCutterItemLogic {
 
     private static volatile boolean REGISTERED = false;
     private static final ThreadLocal<Boolean> AOE_BREAKING = ThreadLocal.withInitial(() -> Boolean.FALSE);
+    private static final int MAX_DISTANCE = 10;
 
     private FoliageCutterItemLogic() {
     }
@@ -51,7 +57,7 @@ public final class FoliageCutterItemLogic {
             }
 
             ItemStack tool = player.getMainHandItem();
-            if (!(tool.getItem() instanceof FoliageCutterItem cutter)) {
+            if (!(tool.getItem() instanceof FoliageCutterItem)) {
                 return;
             }
 
@@ -77,45 +83,58 @@ public final class FoliageCutterItemLogic {
             boolean drop = !player.getAbilities().instabuild;
 
             AOE_BREAKING.set(Boolean.TRUE);
-            int radius = cutter.getRadius();
             try {
-                for (int dx = -radius; dx <= radius; dx++) {
-                    for (int dy = -radius; dy <= radius; dy++) {
-                        for (int dz = -radius; dz <= radius; dz++) {
-                            if (dx == 0 && dy == 0 && dz == 0) {
-                                continue;
-                            }
+                ArrayDeque<SearchNode> queue = new ArrayDeque<>();
+                Set<BlockPos> visited = new HashSet<>();
+                queue.add(new SearchNode(origin, 0));
+                visited.add(origin);
 
-                            checked++;
-                            BlockPos targetPos = origin.offset(dx, dy, dz);
+                while (!queue.isEmpty()) {
+                    SearchNode current = queue.removeFirst();
 
-                            if (targetPos.getY() < level.getMinBuildHeight() || targetPos.getY() >= level.getMaxBuildHeight()
-                                    || !level.getWorldBorder().isWithinBounds(targetPos)) {
-                                skippedOutOfBounds++;
-                                continue;
-                            }
-
-                            BlockState targetState = level.getBlockState(targetPos);
-                            if (targetState.isAir()) {
-                                skippedAir++;
-                                continue;
-                            }
-
-                            if (!targetState.is(FOLIAGE_BREAKABLE)) {
-                                skippedNotLeaves++;
-                                continue;
-                            }
-
-                            boolean ok = level.destroyBlock(targetPos, drop, player);
-                            if (ok) {
-                                destroyed++;
-                            } else {
-                                failed++;
-                                if (verbose) {
-                                    EidoPlants.LOGGER.info("[FoliageCutter] Failed to destroy {} ({})", targetPos, targetState);
-                                }
+                    // The original block is destroyed by the BreakEvent itself.
+                    if (current.distance() > 0) {
+                        BlockState currentState = level.getBlockState(current.pos());
+                        boolean ok = level.destroyBlock(current.pos(), drop, player);
+                        if (ok) {
+                            destroyed++;
+                        } else {
+                            failed++;
+                            if (verbose) {
+                                EidoPlants.LOGGER.info("[FoliageCutter] Failed to destroy {} ({})", current.pos(), currentState);
                             }
                         }
+                    }
+
+                    if (current.distance() >= MAX_DISTANCE) {
+                        continue;
+                    }
+
+                    for (Direction direction : Direction.values()) {
+                        BlockPos targetPos = current.pos().relative(direction);
+                        if (!visited.add(targetPos)) {
+                            continue;
+                        }
+
+                        checked++;
+                        if (targetPos.getY() < level.getMinBuildHeight() || targetPos.getY() >= level.getMaxBuildHeight()
+                                || !level.getWorldBorder().isWithinBounds(targetPos)) {
+                            skippedOutOfBounds++;
+                            continue;
+                        }
+
+                        BlockState targetState = level.getBlockState(targetPos);
+                        if (targetState.isAir()) {
+                            skippedAir++;
+                            continue;
+                        }
+
+                        if (!targetState.is(FOLIAGE_BREAKABLE)) {
+                            skippedNotLeaves++;
+                            continue;
+                        }
+
+                        queue.addLast(new SearchNode(targetPos, current.distance() + 1));
                     }
                 }
             } finally {
@@ -133,6 +152,9 @@ public final class FoliageCutterItemLogic {
                         origin, checked, destroyed, failed, skippedAir, skippedNotLeaves, skippedOutOfBounds
                 );
             }
+        }
+
+        private record SearchNode(BlockPos pos, int distance) {
         }
     }
 }
