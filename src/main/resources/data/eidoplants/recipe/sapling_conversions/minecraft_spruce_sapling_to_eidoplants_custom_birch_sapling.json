@@ -1,0 +1,10 @@
+﻿{
+    "type":  "minecraft:stonecutting",
+    "ingredient":  {
+                       "item":  "minecraft:spruce_sapling"
+                   },
+    "result":  {
+                   "count":  1,
+                   "id":  "eidoplants:custom_birch_sapling"
+               }
+}
