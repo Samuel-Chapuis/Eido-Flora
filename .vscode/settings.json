@@ -6,7 +6,8 @@
     "conventionalCommits.scopes": [
         "cutter",
         "watering",
-        "craft"
+        "craft",
+        "plants"
     ],
     "java.configuration.updateBuildConfiguration": "automatic"
 }

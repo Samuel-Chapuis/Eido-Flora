@@ -1,10 +1,10 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "eidoplants:block/flower_blue",
-		"1": "eidoplants:block/biglilypad",
-		"2": "eidoplants:block/centerflower",
-		"particle": "eidoplants:block/biglilypad"
+		"0": "eidoplants:block/eidoplants_big_lilypad_flower_blue",
+		"1": "eidoplants:block/eidoplants_big_lilypad_base",
+		"2": "eidoplants:block/eidoplants_big_lilypad_center",
+		"particle": "eidoplants:block/eidoplants_big_lilypad_base"
 	},
 	"render_type": "cutout",
 	"tintindex": 0,

@@ -1,0 +1,8 @@
+{
+  "type": "neoforge:remove_features",
+  "biomes": "#minecraft:is_ocean",
+  "features": [
+    "eidoplants:cattails_placed"
+  ],
+  "steps": ["vegetal_decoration"]
+}
