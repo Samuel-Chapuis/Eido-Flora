@@ -4,7 +4,8 @@
     "minecraft:forest",
     "minecraft:dark_forest",
     "minecraft:jungle",
-    "minecraft:sparse_jungle"
+    "minecraft:sparse_jungle",
+    "minecraft:wooded_badlands"
   ],
   "features": "eidoplants:custom_oak_placed",
   "step": "vegetal_decoration"

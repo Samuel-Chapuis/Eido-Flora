@@ -4,7 +4,6 @@
     "minecraft:cherry_grove",
     "minecraft:mangrove_swamp",
     "minecraft:old_growth_birch_forest",
-    "minecraft:wooded_badlands",
     "minecraft:bamboo_jungle"
   ],
   "features": "#eidoplants:trees_to_remove_specific",
